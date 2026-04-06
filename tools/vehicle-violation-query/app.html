@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="icon" href="../../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车辆违章查询</title>
+    <link rel="canonical" href="https://www.htmls.dev/tools/vehicle-violation-query/app.html">
+    <style>
+        :root {
+            --accent: #3b82f6;
+            --accent-soft: #3b82f633;
+            --bg: #0f172a;
+            --text: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #3b82f6 0%, #0f172a 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 8px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 18px;
+            padding: 26px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 14px;
+            background: white;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+        }
+
+        .btn {
+            padding: 10px 18px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            background: var(--accent);
+            color: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+        }
+
+        .btn-secondary {
+            background: #64748b;
+        }
+
+        .muted {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .output-box {
+            background: #f8fafc;
+            border: 1px dashed var(--border);
+            padding: 12px;
+            border-radius: 12px;
+            margin-top: 16px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--text);
+            font-size: 12px;
+        }
+
+        .result {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .violation-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+
+        .violation-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .violation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .violation-title {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .violation-date {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .violation-detail {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .violation-penalty {
+            display: flex;
+            gap: 16px;
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        .penalty-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .penalty-label {
+            color: var(--text-muted);
+        }
+
+        .penalty-value {
+            font-weight: 600;
+            color: #ef4444;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--accent);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 12px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: #fee2e2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 16px;
+        }
+
+        .success-message {
+            background: #d1fae5;
+            border: 1px solid #a7f3d0;
+            color: #059669;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 16px;
+        }
+
+        .info-box {
+            background: #dbeafe;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+    
+        .tool-doc-link,
+        .tool-home-link {
+            position: fixed;
+            top: 16px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #0f172a;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            z-index: 9999;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .tool-doc-link {
+            right: 16px;
+        }
+
+        .tool-home-link {
+            right: 74px;
+        }
+
+        .tool-doc-link:hover,
+        .tool-home-link:hover {
+            background: rgba(255, 255, 255, 1);
+            border-color: rgba(15, 23, 42, 0.2);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <a class="tool-home-link" href="../../index.html">首页</a>
+    <a class="tool-doc-link" href="index.html">说明</a>
+    <div class="container">
+        <div class="header">
+            <h1>🚗 车辆违章查询</h1>
+            <p>查询车辆交通违章记录（演示版本）</p>
+        </div>
+        
+        <div class="card">
+            <div class="info-box">
+                <strong>💡 提示：</strong>此为演示版本，展示界面交互。实际使用需要接入交通管理部门的API接口。支持查询全国各省市的车辆违章记录。
+            </div>
+
+            <div class="grid">
+                <div>
+                    <label>车牌号码</label>
+                    <input type="text" id="plateNumber" placeholder="例如：京A12345" maxlength="8">
+                </div>
+                <div>
+                    <label>车辆识别代号（VIN）</label>
+                    <input type="text" id="vin" placeholder="后6位" maxlength="6">
+                </div>
+                <div>
+                    <label>发动机号</label>
+                    <input type="text" id="engineNo" placeholder="后6位" maxlength="6">
+                </div>
+                <div>
+                    <label>查询地区</label>
+                    <select id="region">
+                        <option value="">选择地区</option>
+                        <option value="beijing">北京</option>
+                        <option value="shanghai">上海</option>
+                        <option value="guangzhou">广州</option>
+                        <option value="shenzhen">深圳</option>
+                        <option value="hangzhou">杭州</option>
+                        <option value="chengdu">成都</option>
+                        <option value="wuhan">武汉</option>
+                        <option value="nanjing">南京</option>
+                        <option value="tianjin">天津</option>
+                        <option value="chongqing">重庆</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="btn" id="queryBtn">查询违章</button>
+                <button class="btn btn-secondary" id="clearBtn">清空</button>
+            </div>
+
+            <div id="messageArea"></div>
+
+            <div class="output-box" id="resultArea" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <p class="muted" style="margin: 0;">查询结果</p>
+                    <span class="chip" id="totalCount">共 0 条记录</span>
+                </div>
+                <div id="violationList"></div>
+            </div>
+
+            <div class="empty-state" id="emptyState">
+                <div class="empty-state-icon">📋</div>
+                <p>输入车辆信息后点击查询按钮</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const plateNumberInput = document.getElementById('plateNumber');
+        const vinInput = document.getElementById('vin');
+        const engineNoInput = document.getElementById('engineNo');
+        const regionSelect = document.getElementById('region');
+        const queryBtn = document.getElementById('queryBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const resultArea = document.getElementById('resultArea');
+        const violationList = document.getElementById('violationList');
+        const totalCount = document.getElementById('totalCount');
+        const emptyState = document.getElementById('emptyState');
+        const messageArea = document.getElementById('messageArea');
+
+        // 模拟违章数据生成器
+        function generateMockViolations() {
+            const violations = [
+                {
+                    type: '闯红灯',
+                    location: '中山路与解放路交叉口',
+                    date: '2024-01-15 14:30',
+                    points: 6,
+                    fine: 200
+                },
+                {
+                    type: '超速行驶',
+                    location: 'G4京港澳高速 K120+500',
+                    date: '2024-01-10 09:15',
+                    points: 3,
+                    fine: 200
+                },
+                {
+                    type: '违规停车',
+                    location: '人民路100号附近',
+                    date: '2024-01-05 16:45',
+                    points: 0,
+                    fine: 100
+                },
+                {
+                    type: '未系安全带',
+                    location: '建设大道与和平路交叉口',
+                    date: '2023-12-28 11:20',
+                    points: 2,
+                    fine: 50
+                },
+                {
+                    type: '压线行驶',
+                    location: '长江大桥引桥处',
+                    date: '2023-12-20 08:30',
+                    points: 3,
+                    fine: 200
+                }
+            ];
+
+            // 随机返回0-5条记录
+            const count = Math.floor(Math.random() * 6);
+            return violations.slice(0, count);
+        }
+
+        // 验证输入
+        function validateInput() {
+            const plateNumber = plateNumberInput.value.trim();
+            const region = regionSelect.value;
+
+            if (!plateNumber) {
+                showMessage('请输入车牌号码', 'error');
+                return false;
+            }
+
+            if (!region) {
+                showMessage('请选择查询地区', 'error');
+                return false;
+            }
+
+            // 简单的车牌格式验证
+            const plateRegex = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领][A-Z][A-HJ-NP-Z0-9]{5,6}$/;
+            if (!plateRegex.test(plateNumber)) {
+                showMessage('车牌号码格式不正确', 'error');
+                return false;
+            }
+
+            return true;
+        }
+
+        // 显示消息
+        function showMessage(text, type) {
+            messageArea.innerHTML = `<div class="${type}-message">${text}</div>`;
+            setTimeout(() => {
+                messageArea.innerHTML = '';
+            }, 3000);
+        }
+
+        // 渲染违章列表
+        function renderViolations(violations) {
+            if (violations.length === 0) {
+                violationList.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">✅</div>
+                        <p>恭喜！未发现违章记录</p>
+                    </div>
+                `;
+                totalCount.textContent = '共 0 条记录';
+                return;
+            }
+
+            totalCount.textContent = `共 ${violations.length} 条记录`;
+            
+            violationList.innerHTML = violations.map(v => `
+                <div class="violation-item">
+                    <div class="violation-header">
+                        <div class="violation-title">${v.type}</div>
+                        <div class="violation-date">${v.date}</div>
+                    </div>
+                    <div class="violation-detail">📍 ${v.location}</div>
+                    <div class="violation-penalty">
+                        <div class="penalty-item">
+                            <span class="penalty-label">扣分：</span>
+                            <span class="penalty-value">${v.points}分</span>
+                        </div>
+                        <div class="penalty-item">
+                            <span class="penalty-label">罚款：</span>
+                            <span class="penalty-value">${v.fine}元</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 查询违章
+        async function queryViolation() {
+            if (!validateInput()) {
+                return;
+            }
+
+            // 显示加载状态
+            queryBtn.disabled = true;
+            queryBtn.textContent = '查询中...';
+            emptyState.style.display = 'none';
+            resultArea.style.display = 'none';
+            
+            violationList.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>正在查询...</p>
+                </div>
+            `;
+            resultArea.style.display = 'block';
+
+            // 模拟API请求延迟
+            await new Promise(resolve => setTimeout(resolve, 1500));
+
+            // 生成模拟数据
+            const violations = generateMockViolations();
+            
+            // 渲染结果
+            renderViolations(violations);
+            
+            // 恢复按钮状态
+            queryBtn.disabled = false;
+            queryBtn.textContent = '查询违章';
+
+            showMessage('查询成功！', 'success');
+        }
+
+        // 清空表单
+        function clearForm() {
+            plateNumberInput.value = '';
+            vinInput.value = '';
+            engineNoInput.value = '';
+            regionSelect.value = '';
+            resultArea.style.display = 'none';
+            emptyState.style.display = 'block';
+            messageArea.innerHTML = '';
+        }
+
+        // 事件监听
+        queryBtn.addEventListener('click', queryViolation);
+        clearBtn.addEventListener('click', clearForm);
+
+        // 回车键查询
+        plateNumberInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                queryViolation();
+            }
+        });
+    </script>
+    <script src="../../assets/clicks.js" defer></script>
+</body>
+</html>

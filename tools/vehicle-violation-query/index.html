@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="icon" href="../../favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车辆违章查询 - JustHTMLs</title>
+    <link rel="canonical" href="https://www.htmls.dev/tools/vehicle-violation-query/">
+    <style>
+        :root {
+            --accent: #3b82f6;
+            --accent-soft: #3b82f633;
+            --bg: #0f172a;
+            --text: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #3b82f6 0%, #0f172a 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 8px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            color: #1f2937;
+            margin-bottom: 16px;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+
+        .features {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .features li {
+            padding: 8px 0;
+            color: #334155;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .features li:before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 26px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 6px 10px 6px 0;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
+        }
+
+        .btn-secondary {
+            background: #64748b;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .info-item {
+            background: #f8fafc;
+            padding: 16px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .info-item h3 {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .info-item p {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0;
+        }
+
+        .note {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 16px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .note strong {
+            color: #92400e;
+        }
+
+        .note p {
+            color: #78350f;
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚗 车辆违章查询</h1>
+            <p>快速查询全国各省市车辆交通违章记录</p>
+        </div>
+
+        <div class="card">
+            <h2>工具介绍</h2>
+            <p>车辆违章查询工具可以帮助您快速查询车辆的交通违章记录，包括闯红灯、超速行驶、违规停车等常见违章行为。支持全国主要城市的车辆查询。</p>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>工具类型</h3>
+                    <p>实用工具</p>
+                </div>
+                <div class="info-item">
+                    <h3>数据处理</h3>
+                    <p>本地处理</p>
+                </div>
+                <div class="info-item">
+                    <h3>是否需要网络</h3>
+                    <p>需要（API调用）</p>
+                </div>
+                <div class="info-item">
+                    <h3>隐私保护</h3>
+                    <p>数据不上传</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>功能特点</h2>
+            <ul class="features">
+                <li>支持全国主要城市车辆违章查询</li>
+                <li>显示详细的违章信息（时间、地点、类型）</li>
+                <li>清晰展示扣分和罚款金额</li>
+                <li>简洁直观的界面设计</li>
+                <li>快速响应，即时查询结果</li>
+                <li>支持车牌号格式自动验证</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>使用说明</h2>
+            <p><strong>1. 输入车牌号码：</strong>请输入完整的车牌号码，例如：京A12345</p>
+            <p><strong>2. 选择查询地区：</strong>从下拉菜单中选择车辆注册地或违章发生地</p>
+            <p><strong>3. 可选信息：</strong>根据需要填写车辆识别代号（VIN）或发动机号的后6位</p>
+            <p><strong>4. 点击查询：</strong>点击"查询违章"按钮，系统将显示查询结果</p>
+            
+            <div class="note">
+                <strong>⚠️ 注意事项</strong>
+                <p>本工具为演示版本，使用模拟数据展示界面交互效果。实际部署时需要接入各地交通管理部门的官方API接口。请确保您有权查询该车辆的违章信息。</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>常见违章类型</h2>
+            <ul class="features">
+                <li><strong>闯红灯：</strong>扣6分，罚款200元</li>
+                <li><strong>超速行驶：</strong>根据超速比例扣3-12分，罚款200-2000元</li>
+                <li><strong>违规停车：</strong>不扣分，罚款100-200元</li>
+                <li><strong>未系安全带：</strong>扣2分，罚款50-200元</li>
+                <li><strong>压线行驶：</strong>扣3分，罚款200元</li>
+                <li><strong>逆行：</strong>扣3分，罚款200元</li>
+            </ul>
+        </div>
+
+        <div class="card" style="text-align: center;">
+            <a href="app.html" class="btn">立即使用</a>
+            <a href="../../index.html" class="btn btn-secondary">返回首页</a>
+        </div>
+    </div>
+    <script src="../../assets/clicks.js" defer></script>
+</body>
+</html>

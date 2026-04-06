@@ -3152,6 +3152,32 @@
       "updatedAt": "2026-01-02",
       "featured": false,
       "repo": "https://github.com/justhtmls/html-tools"
+    },
+    {
+      "id": "vehicle-violation-query",
+      "name": "车辆违章查询",
+      "slug": "vehicle-violation-query",
+      "category": "utility",
+      "tags": [
+        "vehicle",
+        "violation",
+        "query",
+        "traffic",
+        "utility"
+      ],
+      "author": "JustHTMLs",
+      "authorUrl": "https://github.com/justhtmls",
+      "version": "1.0.0",
+      "description": "查询车辆交通违章记录的在线工具",
+      "longDescription": "车辆违章查询工具可以帮助您快速查询车辆的交通违章记录，包括闯红灯、超速行驶、违规停车等常见违章行为。支持全国主要城市的车辆查询，显示详细的违章信息、扣分和罚款金额。",
+      "icon": "🚗",
+      "color": "#3b82f6",
+      "entry": "tools/vehicle-violation-query/app.html",
+      "detail": "tools/vehicle-violation-query/index.html",
+      "createdAt": "2026-04-05",
+      "updatedAt": "2026-04-05",
+      "featured": false,
+      "repo": "https://github.com/justhtmls/html-tools"
     }
   ],
   "categories": [
