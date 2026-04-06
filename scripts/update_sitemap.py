@@ -10,7 +10,7 @@ from pathlib import Path
 from datetime import datetime
 import sys
 
-BASE_URL = "https://www.htmls.dev"
+BASE_URL = "https://html.tpsh.cc"
 
 def generate_sitemap():
     """生成sitemap.xml"""

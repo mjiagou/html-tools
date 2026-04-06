@@ -20,9 +20,9 @@
 本地服务器已启动，您可以通过以下地址访问：
 
 ### 访问链接
-- **工具详情页**：http://localhost:8080/tools/vehicle-violation-query/
-- **工具使用页**：http://localhost:8080/tools/vehicle-violation-query/app.html
-- **网站首页**：http://localhost:8080/
+- **工具详情页**：https://html.tpsh.cc/tools/vehicle-violation-query/
+- **工具使用页**：https://html.tpsh.cc/tools/vehicle-violation-query/app.html
+- **网站首页**：https://html.tpsh.cc/
 
 ## 📋 功能演示
 
@@ -50,7 +50,7 @@
    - 响应式设计
 
 ### 测试步骤
-1. 打开 http://localhost:8080/tools/vehicle-violation-query/app.html
+1. 打开 https://html.tpsh.cc/tools/vehicle-violation-query/app.html
 2. 输入车牌号（例如：京A12345）
 3. 选择地区（例如：北京）
 4. 点击"查询违章"按钮

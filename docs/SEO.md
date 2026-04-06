@@ -20,7 +20,7 @@
 ### 3. 规范化 (Canonical)
 
 - ✅ 所有页面都添加了 `<link rel="canonical">` 标签
-- ✅ 统一指向主域名 `https://www.htmls.dev`
+- ✅ 统一指向主域名 `https://html.tpsh.cc`
 
 ### 4. Meta 标签
 
@@ -96,7 +96,7 @@ chmod +x .git/hooks/pre-commit
 
 ### 2. 验证 Sitemap
 
-访问 `https://www.htmls.dev/sitemap.xml` 确认：
+访问 `https://html.tpsh.cc/sitemap.xml` 确认：
 - XML 格式正确
 - 所有 URL 可访问
 - lastmod 日期是最新的

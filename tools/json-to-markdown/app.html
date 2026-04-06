@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSON 转 Markdown 表格</title>
-    <link rel="canonical" href="https://www.htmls.dev/tools/json-to-markdown/app.html">
+    <link rel="canonical" href="https://html.tpsh.cc/tools/json-to-markdown/app.html">
     <style>
         * {
             margin: 0;
@@ -266,8 +266,7 @@
               const headerRow = `| ${headers.join(" | ")} |`;
               const separator = `| ${headers.map(() => "---").join(" | ")} |`;
               const rows = data.map(item => `| ${headers.map(h => String(item[h] ?? "")).join(" | ")} |`);
-              return [headerRow, separator, ...rows].join("
-");
+              return [headerRow, separator, ...rows].join(\"\n\");
             }
 
         function transform(input) {

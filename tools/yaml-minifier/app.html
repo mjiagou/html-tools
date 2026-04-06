@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YAML 压缩器</title>
-    <link rel="canonical" href="https://www.htmls.dev/tools/yaml-minifier/app.html">
+    <link rel="canonical" href="https://html.tpsh.cc/tools/yaml-minifier/app.html">
     <style>
         * {
             margin: 0;
@@ -261,11 +261,8 @@
 
     <script>
         function minifyYAML(input) {
-              return input.split(/
-?
-/).map(line => line.replace(/\s+#.*$/, "")).filter(line => line.trim() !== "").join("
-");
-            }
+            return input.split(/\r?\n/).map(line => line.replace(/\s+#.*$/, "")).filter(line => line.trim() !== "").join("\n");
+        }
 
         function transform(input) {
             return minifyYAML(input);

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL 参数生成器</title>
-    <link rel="canonical" href="https://www.htmls.dev/tools/url-query-builder/app.html">
+    <link rel="canonical" href="https://html.tpsh.cc/tools/url-query-builder/app.html">
     <style>
         :root {
             --accent: #14b8a6;
@@ -260,8 +260,7 @@
                             queryPart = parts.slice(1).join('?');
                         }
                         const params = new URLSearchParams(queryPart);
-                        paramsInput.value.split('
-        ').forEach(line => {
+                        paramsInput.value.split('\n').forEach(line => {
                             const trimmed = line.trim();
                             if (!trimmed) return;
                             const index = trimmed.indexOf('=');

@@ -2,13 +2,13 @@
 
 <div align="center">
 
-[![JustHTMLs Logo](https://img.shields.io/badge/JustHTMLs-HTML%20Tools-6366f1?style=for-the-badge)](https://htmls.dev/)
+[![JustHTMLs Logo](https://img.shields.io/badge/JustHTMLs-HTML%20Tools-6366f1?style=for-the-badge)](https://html.tpsh.cc/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/justhtmls/html-tools?style=for-the-badge)](https://github.com/justhtmls/html-tools)
 
 **开源 HTML 工具集 - 轻量、隐私、无需安装**
 
-[在线体验](https://htmls.dev/) | [贡献指南](CONTRIBUTING.md) | [提交工具](https://github.com/justhtmls/html-tools/issues/new?template=tool-submission.md)
+[在线体验](https://html.tpsh.cc/) | [贡献指南](CONTRIBUTING.md) | [提交工具](https://github.com/justhtmls/html-tools/issues/new?template=tool-submission.md)
 
 </div>
 
@@ -184,7 +184,7 @@ JustHTMLs 是一个开源的 HTML 工具集平台，汇集各种轻量级的在�
 
 ### 在线使用
 
-直接访问 [JustHTMLs 网站](https://htmls.dev/) 即可使用所有工具。
+直接访问 [JustHTMLs 网站](https://html.tpsh.cc/) 即可使用所有工具。
 
 ### 本地运行
 

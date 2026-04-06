@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML 转 Markdown</title>
-    <link rel="canonical" href="https://www.htmls.dev/tools/html-to-markdown/app.html">
+    <link rel="canonical" href="https://html.tpsh.cc/tools/html-to-markdown/app.html">
     <style>
         * {
             margin: 0;
@@ -283,8 +283,7 @@
                   case "strong": return `**${content}**`;
                   case "em": return `*${content}*`;
                   case "a": return `[${content}](${node.getAttribute("href") || ""})`;
-                  case "ul": return Array.from(node.children).map(li => `- ${convert(li).trim()}`).join("
-") + "
+                  case "ul": return Array.from(node.children).map(li => `- ${convert(li).trim()}`).join(\"\n\") + "
 
 ";
                   case "li": return content;
