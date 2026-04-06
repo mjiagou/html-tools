@@ -261,19 +261,20 @@
 
     <script>
         function jsonToXml(obj, nodeName = "root") {
-  if (obj === null || obj === undefined) return `<${nodeName}/>`;
-  if (Array.isArray(obj)) {
-    return obj.map(item => jsonToXml(item, nodeName)).join("");
-  }
-  if (typeof obj === "object") {
-    const children = Object.keys(obj).map(key => jsonToXml(obj[key], key)).join("");
-    return `<${nodeName}>${children}</${nodeName}>`;
-  }
-  return `<${nodeName}>${escapeXml(String(obj))}</${nodeName}>`;
-}
-function escapeXml(value) {
-  return value.replace(/[<>&'"]/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;","'":"&apos;",""":"&quot;"}[c]));
-}
+            if (obj === null || obj === undefined) return `<${nodeName}/>`;
+            if (Array.isArray(obj)) {
+                return obj.map(item => jsonToXml(item, nodeName)).join("");
+            }
+            if (typeof obj === "object") {
+                const children = Object.keys(obj).map(key => jsonToXml(obj[key], key)).join("");
+                return `<${nodeName}>${children}</${nodeName}>`;
+            }
+            return `<${nodeName}>${escapeXml(String(obj))}</${nodeName}>`;
+        }
+
+        function escapeXml(value) {
+            return value.replace(/[<>&'"]/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;","'":"&apos;","\"":"&quot;"}[c]));
+        }
 
         function transform(input) {
             const obj = JSON.parse(input);
