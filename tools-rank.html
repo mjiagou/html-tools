@@ -4,7 +4,9 @@
     <link rel="icon" href="favicon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>工具使用排行 - JustHTMLs</title>
+    <title>热门工具使用排行 - 微工坊 TinyTools | 热门轻量在线工具榜单</title>
+    <meta name="description" content="微工坊（TinyTools）热门工具使用排行榜，基于实时访问统计，展示最受开发者与办公用户欢迎的高效轻量前端工具。">
+    <meta name="keywords" content="微工坊,TinyTools,热门工具排行,在线工具推荐,开发者工具榜单">
     <link rel="canonical" href="https://html.tpsh.cc/tools-rank.html">
     <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <style>
@@ -211,7 +213,10 @@
     <header>
         <div class="container">
             <div class="header-row">
-                <a class="back-link" href="./"><i class="fas fa-arrow-left"></i> 返回首页</a>
+                <div style="display:flex;align-items:center;gap:16px;">
+                    <a class="back-link" href="./"><i class="fas fa-arrow-left"></i> 返回首页</a>
+                    <a class="back-link" href="blog/"><i class="fas fa-newspaper"></i> 技术博客</a>
+                </div>
                 <div class="page-title">工具使用排行</div>
                 <div class="controls">
                     <label for="rank-metric">排行指标</label>
@@ -248,7 +253,7 @@
         let stats = {};
 
         async function loadTools() {
-            const response = await fetch('index.json');
+            const response = await fetch('index.json', { cache: 'no-cache' });
             if (!response.ok) {
                 throw new Error('加载工具列表失败');
             }

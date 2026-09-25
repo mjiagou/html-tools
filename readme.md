@@ -1,24 +1,21 @@
-# JustHTMLs
+# 微工坊 TinyTools
 
 <div align="center">
 
-[![JustHTMLs Logo](https://img.shields.io/badge/JustHTMLs-HTML%20Tools-6366f1?style=for-the-badge)](https://html.tpsh.cc/)
+[![TinyTools Logo](https://img.shields.io/badge/TinyTools-微工坊-6366f1?style=for-the-badge)](https://html.tpsh.cc/)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/justhtmls/html-tools?style=for-the-badge)](https://github.com/justhtmls/html-tools)
 
-**开源 HTML 工具集 - 轻量、隐私、无需安装**
+**轻量纯前端在线工具箱 - 隐私零上传·即开即用**
 
-[在线体验](https://html.tpsh.cc/) | [贡献指南](CONTRIBUTING.md) | [提交工具](https://github.com/justhtmls/html-tools/issues/new?template=tool-submission.md)
+[在线体验](https://html.tpsh.cc/)
 
 </div>
-
-![项目演示](https://piggo5.oss-cn-shenzhen.aliyuncs.com/2026/CleanShot%202025-12-23%20at%2014.24.34.gif)
 
 ---
 
 ## 项目简介
 
-JustHTMLs 是一个开源的 HTML 工具集平台，汇集各种轻量级的在线工具。所有工具均为单文件 HTML，无需安装，打开即用，数据在浏览器本地处理，保护您的隐私。
+微工坊（TinyTools）是一个面向开发者、设计师与日常办公用户的轻量级在线工具箱平台。汇集 120+ 款开箱即用的前端小工具，所有计算均在浏览器本地安全沙箱处理，绝不上传服务器，全面守护用户隐私。
 
 致力于打造最完整的中文 HTML 工具集合。
 
@@ -184,17 +181,13 @@ JustHTMLs 是一个开源的 HTML 工具集平台，汇集各种轻量级的在�
 
 ### 在线使用
 
-直接访问 [JustHTMLs 网站](https://html.tpsh.cc/) 即可使用所有工具。
+直接访问 [微工坊 TinyTools 网站](https://html.tpsh.cc/) 即可使用所有工具。
 
 ### 本地运行
 
 ```bash
-# 克隆仓库
-git clone https://github.com/justhtmls/html-tools.git
-cd html-tools
-
-# 使用任意静态服务器运行
-python -m http.server 8000
+# 启动本地开发服务
+python3 -m http.server 8000
 # 或
 npx serve .
 ```
@@ -209,20 +202,13 @@ npx serve .
 
 我们欢迎社区贡献！提交新工具的流程非常简单：
 
-### 方式一：通过 GitHub Issues（推荐）
+### 添加新工具流程
 
-1. 创建你的工具（单文件 HTML）
-2. [创建工具提交 Issue](https://github.com/justhtmls/html-tools/issues/new?template=tool-submission.md)
-3. 填写工具信息并粘贴代码
-4. 等待审核通过后合并
-
-### 方式二：Pull Request
-
-1. Fork justhtmls/html-tools 仓库
-2. 在 `tools/` 目录下创建你的工具文件夹
-3. 按规范创建工具文件
-4. 更新 `index.json` 索引
-5. 提交 Pull Request
+1. 在 `tools/` 目录下创建你的工具文件夹
+2. 按规范创建单文件工具（`app.html` 和 `index.html`）
+3. 在 `index.json` 中注册工具元数据
+4. 运行 `python3 scripts/update_sitemap.py` 生成站点地图
+5. 运行 `node scripts/check-filter.js` 验证索引检索通过
 
 ### 工具规范
 
@@ -241,9 +227,34 @@ tools/
 - 不使用 React 或需要构建的技术
 - 从本地 assets/vendor 加载第三方库
 - 保持精简（建议 500 行以内）
-- 数据本地处理，保护隐私
+- 详细内容请查看 [贡献指南](CONTRIBUTING.md)。
 
-详细内容请查看 [贡献指南](CONTRIBUTING.md)。
+---
+
+## 📝 发布技术博客（SEO推广）
+
+本项目内置了纯静态预渲染博客系统，用于通过高质量干货与教程内容推广站内工具：
+
+1. 在 `blog/posts/` 目录下新建 Markdown 文件（如 `my-post.md`）：
+   ```markdown
+   ---
+   title: 你的文章标题
+   slug: my-post
+   date: 2026-09-25
+   author: 微工坊 TinyTools
+   description: 搜索结果中展示的简要描述（120字左右）
+   keywords: 关键词1, 关键词2, 工具推荐
+   tools:
+     - json-formatter
+     - base64-encode
+   ---
+   你的正文 Markdown 内容...
+   ```
+2. 运行一键构建脚本：
+   ```bash
+   python3 scripts/build_blog.py
+   ```
+   脚本会自动编译生成预渲染的静态 HTML 文章页、更新博客列表页 [blog/index.html](blog/index.html)，并在 [sitemap.xml](sitemap.xml) 中自动注册新增文章 URL。
 
 ---
 

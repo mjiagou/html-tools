@@ -39,29 +39,39 @@ def generate_sitemap():
         'priority': '1.0'
     })
     
-    # 添加其他页面
-    for page in ['reference.html']:
+    # 添加主要页面
+    for page in ['reference.html', 'tools-rank.html']:
         page_path = base_dir / page
         if page_path.exists():
-            # 使用文件的修改时间
             lastmod = datetime.fromtimestamp(page_path.stat().st_mtime).strftime('%Y-%m-%d')
             urls.append({
                 'loc': BASE_URL + '/' + page,
                 'lastmod': lastmod,
-                'changefreq': 'monthly',
-                'priority': '0.5'
+                'changefreq': 'weekly',
+                'priority': '0.8'
             })
-    
-    # 添加 CONTRIBUTING.md (指向 GitHub)
-    contributing_path = base_dir / 'CONTRIBUTING.md'
-    if contributing_path.exists():
-        lastmod = datetime.fromtimestamp(contributing_path.stat().st_mtime).strftime('%Y-%m-%d')
-        urls.append({
-            'loc': 'https://github.com/justhtmls/html-tools/blob/main/CONTRIBUTING.md',
-            'lastmod': lastmod,
-            'changefreq': 'monthly',
-            'priority': '0.5'
-        })
+            
+    # 添加博客页面
+    blog_dir = base_dir / 'blog'
+    if blog_dir.exists():
+        blog_index = blog_dir / 'index.html'
+        if blog_index.exists():
+            lastmod = datetime.fromtimestamp(blog_index.stat().st_mtime).strftime('%Y-%m-%d')
+            urls.append({
+                'loc': BASE_URL + '/blog/',
+                'lastmod': lastmod,
+                'changefreq': 'weekly',
+                'priority': '0.8'
+            })
+        for blog_html in blog_dir.glob('*.html'):
+            if blog_html.name != 'index.html':
+                lastmod = datetime.fromtimestamp(blog_html.stat().st_mtime).strftime('%Y-%m-%d')
+                urls.append({
+                    'loc': BASE_URL + '/blog/' + blog_html.name,
+                    'lastmod': lastmod,
+                    'changefreq': 'monthly',
+                    'priority': '0.7'
+                })
     
     # 添加所有工具页面
     for tool in data.get('tools', []):

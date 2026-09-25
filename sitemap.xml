@@ -2,1543 +2,1549 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://html.tpsh.cc/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/reference.html</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://github.com/justhtmls/html-tools/blob/main/CONTRIBUTING.md</loc>
-    <lastmod>2026-04-05</lastmod>
+    <loc>https://html.tpsh.cc/tools-rank.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://html.tpsh.cc/blog/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://html.tpsh.cc/blog/how-to-format-and-validate-large-json-locally.html</loc>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://html.tpsh.cc/blog/why-pure-frontend-tools.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-to-yaml/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-to-yaml/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-formatter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-formatter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/curl-converter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/curl-converter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base64-encode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base64-encode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/color-picker/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/color-picker/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/regex-tester/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/regex-tester/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/url-encode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/url-encode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/qr-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/qr-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/password-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/password-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/uuid-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/uuid-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/word-counter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/word-counter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/timestamp-converter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/timestamp-converter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base-converter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base-converter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-diff/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-diff/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/jwt-decoder/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/jwt-decoder/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-to-base64/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-to-base64/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/xml-to-json/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/xml-to-json/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/markdown-to-html/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/markdown-to-html/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/hash-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/hash-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/html-entity/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/html-entity/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/case-converter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/case-converter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/css-minifier/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/css-minifier/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/cron-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/cron-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/percentage-calculator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/percentage-calculator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/lorem-ipsum/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/lorem-ipsum/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-validator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-validator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/slug-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/slug-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-deduplicator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-deduplicator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-sorter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-sorter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/line-numberer/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/line-numberer/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-cleaner/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-cleaner/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/csv-to-json/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/csv-to-json/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-to-csv/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-to-csv/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/url-parser/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/url-parser/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/contrast-checker/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/contrast-checker/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/password-strength/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/password-strength/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/date-diff/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/date-diff/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/js-formatter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/js-formatter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/html-formatter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/html-formatter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/sql-formatter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/sql-formatter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/http-status/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/http-status/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-escape/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-escape/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/url-query-builder/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/url-query-builder/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-replacer/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-replacer/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/line-ending-converter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/line-ending-converter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-reverser/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-reverser/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-compressor/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-compressor/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-resizer/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-resizer/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-to-webp/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-to-webp/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/unit-converter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/unit-converter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/bmi-calculator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/bmi-calculator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/salary-calculator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/salary-calculator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/mortgage-calculator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/mortgage-calculator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/gradient-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/gradient-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base32-encode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base32-encode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base32-decode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base32-decode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base58-encode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base58-encode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base58-decode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base58-decode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base64url-encode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base64url-encode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base64url-decode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base64url-decode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/hex-encode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/hex-encode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/hex-decode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/hex-decode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/unicode-escape/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/unicode-escape/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/unicode-unescape/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/unicode-unescape/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/rot13/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/rot13/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/caesar-cipher/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/caesar-cipher/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/morse-encode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/morse-encode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/morse-decode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/morse-decode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/binary-encode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/binary-encode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/binary-decode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/binary-decode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/html-minifier/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/html-minifier/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/js-minifier/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/js-minifier/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/sql-minifier/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/sql-minifier/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-minifier/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-minifier/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-sorter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-sorter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/xml-formatter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/xml-formatter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/xml-minifier/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/xml-minifier/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-formatter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-formatter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-minifier/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-minifier/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-to-xml/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-to-xml/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-to-json/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-to-json/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/xml-to-yaml/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/xml-to-yaml/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-to-xml/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-to-xml/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/csv-to-yaml/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/csv-to-yaml/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-to-csv/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/yaml-to-csv/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/tsv-to-json/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/tsv-to-json/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-to-tsv/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-to-tsv/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/tsv-to-csv/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/tsv-to-csv/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/csv-to-tsv/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/csv-to-tsv/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/html-to-text/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/html-to-text/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-to-html/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-to-html/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/markdown-to-text/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/markdown-to-text/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/html-to-markdown/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/html-to-markdown/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-to-markdown/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/json-to-markdown/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/jwt-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/jwt-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/nanoid-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/nanoid-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/ulid-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/ulid-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/gitignore-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/gitignore-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/robots-txt-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/robots-txt-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/sitemap-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/sitemap-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/meta-tags-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/meta-tags-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/random-number/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/random-number/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/random-picker/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/random-picker/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-rotate/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-rotate/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-watermark/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-watermark/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-crop/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-crop/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-stitch/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-stitch/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-filter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/image-filter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-splitter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-splitter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-joiner/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-joiner/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-indenter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-indenter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-wrapper/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/text-wrapper/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/emoji-remover/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/emoji-remover/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/jsonl-converter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/jsonl-converter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base36-encode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base36-encode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base36-decode/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/base36-decode/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/bytes-converter/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/bytes-converter/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/markdown-table-generator/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/markdown-table-generator/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/dice-roller/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/dice-roller/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/draw-lots/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/draw-lots/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/rock-paper-scissors/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/rock-paper-scissors/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/countdown-timer/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/countdown-timer/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/daily-quote/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/daily-quote/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/markdown-to-wechat/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/markdown-to-wechat/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/qr-decoder/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/qr-decoder/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/ip-info/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/tools/ip-info/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://html.tpsh.cc/tools/vehicle-violation-query/</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://html.tpsh.cc/tools/vehicle-violation-query/app.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

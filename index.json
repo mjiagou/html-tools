@@ -11,10 +11,13 @@
         "json",
         "yaml",
         "converter",
-        "developer"
+        "developer",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 JSON 格式转换为 YAML 格式的在线工具，支持复制到剪贴板",
       "longDescription": "这是一个轻量级的 JSON 到 YAML 转换工具。直接在浏览器中处理数据，无需服务器，保护您的隐私。",
@@ -25,7 +28,7 @@
       "createdAt": "2025-12-22",
       "updatedAt": "2025-12-22",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "json-formatter",
@@ -36,10 +39,13 @@
         "json",
         "formatter",
         "validator",
-        "beautifier"
+        "beautifier",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "格式化、压缩和验证 JSON 数据",
       "longDescription": "JSON 格式化工具可以帮助你美化、压缩和验证 JSON 数据，支持多种缩进样式、键名排序，显示字符数、行数、文件大小等统计信息。",
@@ -50,7 +56,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "curl-converter",
@@ -61,10 +67,13 @@
         "curl",
         "http",
         "request",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 curl 命令转换成 JavaScript / Python / Java / Go 请求代码",
       "longDescription": "CURL 转代码工具可以把浏览器复制的 curl 命令解析成 JavaScript fetch、Python requests、Java HttpClient 与 Go net/http 代码，支持常见 headers、body 与认证配置。",
@@ -75,7 +84,7 @@
       "createdAt": "2026-01-24",
       "updatedAt": "2026-01-24",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "base64-encode",
@@ -86,10 +95,13 @@
         "base64",
         "encoder",
         "decoder",
-        "converter"
+        "converter",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速进行 Base64 编码和解码，支持文本和文件",
       "longDescription": "Base64 编码解码工具，支持 URL 安全模式，可拖拽文件进行编码，完全离线工作保护隐私。",
@@ -100,7 +112,7 @@
       "createdAt": "2025-12-22",
       "updatedAt": "2025-12-22",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "color-picker",
@@ -111,10 +123,13 @@
         "color",
         "picker",
         "design",
-        "converter"
+        "converter",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "专业的颜色选择工具，支持多种颜色格式转换",
       "longDescription": "颜色选择器支持 HEX、RGB、HSL、HSV 格式实时转换，带有色相和透明度滑块，是设计师和开发者的必备工具。",
@@ -125,7 +140,7 @@
       "createdAt": "2025-12-22",
       "updatedAt": "2025-12-22",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "regex-tester",
@@ -135,10 +150,13 @@
       "tags": [
         "regex",
         "testing",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "实时测试和调试正则表达式，支持所有常用标志位",
       "longDescription": "正则表达式测试器是开发者的必备工具，支持实时测试正则表达式，显示匹配结果和位置，帮助快速调试和优化正则模式。",
@@ -149,7 +167,7 @@
       "createdAt": "2025-12-22",
       "updatedAt": "2025-12-22",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "url-encode",
@@ -160,10 +178,13 @@
         "url",
         "encoder",
         "decoder",
-        "converter"
+        "converter",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速进行 URL 编码和解码，处理中文和特殊字符",
       "longDescription": "URL 编码解码工具可以正确处理中文字符和特殊字符，将它们转换为 URL 安全格式，支持双向转换。",
@@ -174,7 +195,7 @@
       "createdAt": "2025-12-22",
       "updatedAt": "2025-12-22",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "qr-generator",
@@ -184,10 +205,13 @@
       "tags": [
         "qrcode",
         "generator",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速生成二维码，支持自定义颜色和尺寸",
       "longDescription": "二维码生成器可以将文本、网址等内容快速转换为二维码图片，支持多种尺寸和颜色自定义，生成的二维码可直接下载使用。",
@@ -198,7 +222,7 @@
       "createdAt": "2025-12-22",
       "updatedAt": "2025-12-22",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "password-generator",
@@ -209,10 +233,13 @@
         "password",
         "security",
         "generator",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "创建强大且安全的随机密码，保护您的账户安全",
       "longDescription": "安全密码生成器使用密码学安全的随机数生成器创建强密码，支持自定义密码长度、字符类型，并提供密码强度评估。",
@@ -223,7 +250,7 @@
       "createdAt": "2025-12-22",
       "updatedAt": "2025-12-22",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "uuid-generator",
@@ -234,10 +261,13 @@
         "uuid",
         "generator",
         "developer",
-        "identifier"
+        "identifier",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速生成各种版本的 UUID",
       "longDescription": "UUID 生成器可以快速生成 UUID v4（随机）和 UUID v1（基于时间戳），支持多种输出格式，批量生成，是开发者生成唯一标识的必备工具。",
@@ -248,7 +278,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "word-counter",
@@ -259,10 +289,13 @@
         "text",
         "counter",
         "word",
-        "characters"
+        "characters",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "实时统计文本的字数、词数、行数等信息",
       "longDescription": "字数统计工具可以实时分析中英文混合文本的各种统计数据，包括字符数、词数、行数、段落数等，支持分类统计和阅读时间计算。",
@@ -273,7 +306,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "timestamp-converter",
@@ -284,10 +317,13 @@
         "timestamp",
         "unix",
         "datetime",
-        "converter"
+        "converter",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "时间戳与日期时间格式互相转换",
       "longDescription": "Unix 时间戳转换工具支持时间戳与日期时间格式互相转换，支持秒和毫秒两种格式，实时显示当前时间戳，显示相对时间。",
@@ -298,7 +334,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "base-converter",
@@ -310,10 +346,13 @@
         "converter",
         "binary",
         "hexadecimal",
-        "octal"
+        "octal",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "支持二进制、八进制、十进制、十六进制互相转换",
       "longDescription": "进制转换工具支持 2、8、10、16 进制互相转换，实时输入即时转换，支持进制前缀，是程序员进行进制计算和学习计算机科学的必备工具。",
@@ -324,7 +363,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-diff",
@@ -335,10 +374,13 @@
         "text",
         "diff",
         "compare",
-        "difference"
+        "difference",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "比较两段文本的差异，支持逐行对比",
       "longDescription": "文本对比工具可以快速比较两段文本之间的差异，高亮显示新增、删除和未修改的行，支持逐行显示和并排显示两种模式。",
@@ -349,7 +391,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "jwt-decoder",
@@ -361,10 +403,13 @@
         "decoder",
         "json",
         "token",
-        "authentication"
+        "authentication",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "解码和验证 JSON Web Token",
       "longDescription": "JWT 解码器可以解码 JSON Web Token 并查看其内容，包括 Header、Payload 和 Signature 三部分，检查 Token 过期时间，是调试 API 认证的必备工具。",
@@ -375,7 +420,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "image-to-base64",
@@ -386,10 +431,13 @@
         "image",
         "base64",
         "converter",
-        "encoding"
+        "encoding",
+        "图片处理",
+        "图像工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将图片转换为 Base64 编码字符串",
       "longDescription": "图片转 Base64 工具可以将图片文件转换为 Base64 编码的字符串，支持拖拽上传，显示图片预览和信息，输出 Data URI 或纯 Base64 字符串。",
@@ -400,7 +448,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "xml-to-json",
@@ -411,10 +459,13 @@
         "xml",
         "json",
         "converter",
-        "format"
+        "format",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 XML 格式转换为 JSON 格式",
       "longDescription": "XML 转 JSON 工具可以在 XML 和 JSON 两种数据格式之间进行转换，支持自动转换、格式化输出、保留属性等功能，是处理数据格式的必备工具。",
@@ -425,7 +476,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "markdown-to-html",
@@ -436,10 +487,13 @@
         "markdown",
         "html",
         "converter",
-        "editor"
+        "editor",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "实时将 Markdown 转换为 HTML 并预览",
       "longDescription": "Markdown 转 HTML 工具可以实时将 Markdown 格式的文本转换为 HTML，支持常用 Markdown 语法，包括标题、列表、代码块、链接、图片等，支持复制和下载 HTML。",
@@ -450,7 +504,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "hash-generator",
@@ -462,10 +516,13 @@
         "md5",
         "sha",
         "crypto",
-        "security"
+        "security",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "计算文本的 MD5、SHA-1、SHA-256 等哈希值",
       "longDescription": "哈希生成器可以计算任意文本的多种哈希值，包括 MD5、SHA-1、SHA-256、SHA-384、SHA-512 以及 Base64 编码。使用浏览器原生 Web Crypto API，完全在本地运行。",
@@ -476,7 +533,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "html-entity",
@@ -487,10 +544,13 @@
         "html",
         "entity",
         "encode",
-        "decode"
+        "decode",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 HTML 特殊字符转换为实体编码或反向转换",
       "longDescription": "HTML 实体编码/解码工具可以帮助你在 HTML 特殊字符和实体编码之间进行转换。支持常用符号、货币符号、数学符号等。",
@@ -501,7 +561,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "case-converter",
@@ -512,10 +572,13 @@
         "text",
         "case",
         "converter",
-        "format"
+        "format",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "在各种命名格式之间转换文本",
       "longDescription": "大小写转换工具可以帮助你在各种文本格式之间进行转换，包括大小写转换和各种编程命名格式（camelCase、PascalCase、snake_case、kebab-case 等）。",
@@ -526,7 +589,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "css-minifier",
@@ -537,10 +600,13 @@
         "css",
         "minifier",
         "beautifier",
-        "formatter"
+        "formatter",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "压缩和美化 CSS 代码",
       "longDescription": "CSS 压缩/格式化工具可以帮助你优化 CSS 代码。压缩模式可以减少文件大小，提高加载速度；格式化模式可以让代码更易读。显示压缩前后大小对比。",
@@ -551,7 +617,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "cron-generator",
@@ -562,10 +628,13 @@
         "cron",
         "scheduler",
         "expression",
-        "generator"
+        "generator",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "可视化和生成 Cron 定时任务表达式",
       "longDescription": "Cron 表达式生成器可以帮助你通过可视化界面创建和理解 Cron 定时任务表达式。支持预设模板（每小时、每天、每周等）和自定义配置。",
@@ -576,7 +645,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "percentage-calculator",
@@ -587,10 +656,13 @@
         "calculator",
         "percentage",
         "math",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速计算百分比相关问题",
       "longDescription": "百分比计算器可以帮助你快速解决各种百分比计算问题，包括求百分比值、计算占比、百分比增减、百分比差异等。",
@@ -601,7 +673,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "lorem-ipsum",
@@ -612,10 +684,13 @@
         "lorem",
         "ipsum",
         "placeholder",
-        "generator"
+        "generator",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "生成占位文本用于设计和测试",
       "longDescription": "Lorem Ipsum 生成器可以生成经典的占位文本，用于网页设计、排版测试和原型制作。支持生成段落、句子和单词，显示字数和字符统计。",
@@ -626,7 +701,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "yaml-validator",
@@ -637,10 +712,13 @@
         "yaml",
         "validator",
         "json",
-        "converter"
+        "converter",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "验证 YAML 语法并转换为 JSON",
       "longDescription": "YAML 验证器可以帮助你验证 YAML 语法是否正确，并将其转换为 JSON 格式以便查看。支持常见 YAML 数据类型。",
@@ -651,7 +729,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "slug-generator",
@@ -662,10 +740,13 @@
         "slug",
         "url",
         "generator",
-        "seo"
+        "seo",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将标题或文本转换为 URL 友好的 slug",
       "longDescription": "URL Slug 生成器可以将标题或文本转换为 URL 友好的格式，用于创建美观且 SEO 友好的网址。支持连字符和下划线分隔符、可选小写转换、移除停用词等。",
@@ -676,7 +757,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-deduplicator",
@@ -687,10 +768,13 @@
         "text",
         "dedupe",
         "cleanup",
-        "list"
+        "list",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "按行去重并保留原始顺序",
       "longDescription": "文本去重工具支持按行去重、忽略大小写和移除空行，适合清理清单和名单。",
@@ -701,7 +785,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-sorter",
@@ -712,10 +796,13 @@
         "text",
         "sorter",
         "list",
-        "utility"
+        "utility",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "按行排序文本，支持数字排序",
       "longDescription": "文本排序工具支持升序/降序、数字排序和去重，适合整理清单和列表。",
@@ -726,7 +813,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "line-numberer",
@@ -737,10 +824,13 @@
         "text",
         "line",
         "number",
-        "editor"
+        "editor",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "为文本自动添加行号",
       "longDescription": "行号添加器可自定义起始值、步进和分隔符，适合代码与清单。",
@@ -751,7 +841,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-cleaner",
@@ -762,10 +852,13 @@
         "text",
         "cleaner",
         "format",
-        "utility"
+        "utility",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "清理文本中的空格与空行",
       "longDescription": "文本清理器支持合并空格、删除空行并规范换行格式。",
@@ -776,7 +869,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "csv-to-json",
@@ -787,10 +880,13 @@
         "csv",
         "json",
         "converter",
-        "table"
+        "table",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 CSV 表格转换为 JSON",
       "longDescription": "CSV 转 JSON 工具支持表头解析、分隔符设置和引号字段。",
@@ -801,7 +897,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "json-to-csv",
@@ -812,10 +908,13 @@
         "json",
         "csv",
         "converter",
-        "export"
+        "export",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 JSON 数组导出为 CSV",
       "longDescription": "JSON 转 CSV 工具可自动生成表头并处理引号转义。",
@@ -826,7 +925,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "url-parser",
@@ -837,10 +936,13 @@
         "url",
         "parser",
         "developer",
-        "web"
+        "web",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "解析 URL 的各个组成部分",
       "longDescription": "URL 解析器可拆分协议、域名、路径、参数和锚点。",
@@ -851,7 +953,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "contrast-checker",
@@ -862,10 +964,13 @@
         "color",
         "contrast",
         "accessibility",
-        "design"
+        "design",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "检测前景与背景颜色对比度",
       "longDescription": "颜色对比度检测基于 WCAG 标准并给出 AA/AAA 结果。",
@@ -876,7 +981,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "password-strength",
@@ -887,10 +992,13 @@
         "password",
         "security",
         "checker",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "检测密码强度和安全性",
       "longDescription": "密码强度检测统计长度与字符类型并给出改进建议。",
@@ -901,7 +1009,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "date-diff",
@@ -912,10 +1020,13 @@
         "date",
         "time",
         "calculator",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "计算两个日期之间的差值",
       "longDescription": "日期差值计算器输出天、小时、分钟和秒等多维度结果。",
@@ -926,7 +1037,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "js-formatter",
@@ -937,10 +1048,13 @@
         "javascript",
         "formatter",
         "beautifier",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "美化 JavaScript 代码并提升可读性",
       "longDescription": "JavaScript 格式化工具可以帮助你把凌乱的 JS 代码重新排版，支持常见缩进设置，方便阅读与分享。",
@@ -951,7 +1065,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "html-formatter",
@@ -962,10 +1076,13 @@
         "html",
         "formatter",
         "beautifier",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "整理 HTML 结构并自动缩进",
       "longDescription": "HTML 格式化工具支持对 HTML 片段进行自动缩进与换行，让结构更加清晰易读。",
@@ -976,7 +1093,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "sql-formatter",
@@ -987,10 +1104,13 @@
         "sql",
         "formatter",
         "database",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "格式化 SQL 语句，提升可读性",
       "longDescription": "SQL 格式化工具可以将复杂的 SQL 查询语句自动排版，突出关键字与层级结构。",
@@ -1001,7 +1121,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "http-status",
@@ -1012,10 +1132,13 @@
         "http",
         "status",
         "api",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速查询常见 HTTP 状态码含义",
       "longDescription": "HTTP 状态码查询工具整理了常用的状态码及说明，支持搜索过滤，适合开发调试与排查问题。",
@@ -1026,7 +1149,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "json-escape",
@@ -1037,10 +1160,13 @@
         "json",
         "escape",
         "converter",
-        "string"
+        "string",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "在 JSON 字符串转义与反转义之间转换",
       "longDescription": "JSON 字符串转义工具可以把普通文本转换为 JSON 可用的转义格式，或将转义字符还原为可读文本。",
@@ -1051,7 +1177,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "url-query-builder",
@@ -1062,10 +1188,13 @@
         "url",
         "query",
         "builder",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "批量生成 URL 查询参数并输出完整链接",
       "longDescription": "URL 参数生成器支持通过键值对批量生成查询参数，自动编码，快速得到完整链接。",
@@ -1076,7 +1205,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-replacer",
@@ -1087,10 +1216,13 @@
         "text",
         "replace",
         "search",
-        "utility"
+        "utility",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "批量查找并替换文本内容",
       "longDescription": "文本查找替换工具支持快速替换关键词，可选择大小写与正则模式，适合清理文本或批量替换内容。",
@@ -1101,7 +1233,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "line-ending-converter",
@@ -1112,10 +1244,13 @@
         "text",
         "line",
         "lf",
-        "crlf"
+        "crlf",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "在 LF 与 CRLF 行尾符之间转换",
       "longDescription": "行尾符转换器可以快速将文本在 LF 和 CRLF 之间切换，适合跨系统协作与代码整理。",
@@ -1126,7 +1261,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-reverser",
@@ -1137,10 +1272,13 @@
         "text",
         "reverse",
         "converter",
-        "utility"
+        "utility",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "支持整段或按行反转文本",
       "longDescription": "文本反转工具可以将文本按字符或按行反转，适合特殊排版、加密提示或趣味处理。",
@@ -1151,7 +1289,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "image-compressor",
@@ -1162,10 +1300,13 @@
         "image",
         "compress",
         "optimizer",
-        "utility"
+        "utility",
+        "图片处理",
+        "图像工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "本地压缩图片，减少文件体积",
       "longDescription": "图片压缩工具使用浏览器 Canvas 在本地压缩图片，支持调整质量与输出格式。",
@@ -1176,7 +1317,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "image-resizer",
@@ -1187,10 +1328,13 @@
         "image",
         "resize",
         "editor",
-        "utility"
+        "utility",
+        "图片处理",
+        "图像工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "调整图片宽高，支持锁定比例",
       "longDescription": "图片尺寸调整工具可在浏览器中修改图片分辨率，支持保持原始比例并导出新图片。",
@@ -1201,7 +1345,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "image-to-webp",
@@ -1212,10 +1356,13 @@
         "image",
         "webp",
         "converter",
-        "compression"
+        "compression",
+        "图片处理",
+        "图像工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将图片转换为 WebP 格式",
       "longDescription": "图片转 WebP 工具帮助你把 JPG/PNG 等格式转换为 WebP，减少体积并提升加载速度。",
@@ -1226,7 +1373,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "unit-converter",
@@ -1237,10 +1384,13 @@
         "unit",
         "converter",
         "length",
-        "weight"
+        "weight",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "长度、重量、温度等单位快速换算",
       "longDescription": "单位换算器支持常用长度、重量与温度单位的快速转换，适合日常与工作场景。",
@@ -1251,7 +1401,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "bmi-calculator",
@@ -1262,10 +1412,13 @@
         "bmi",
         "health",
         "calculator",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速计算身体质量指数 BMI",
       "longDescription": "BMI 计算器可根据身高体重计算 BMI 并给出健康范围提示，适合日常健康管理。",
@@ -1276,7 +1429,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "salary-calculator",
@@ -1287,10 +1440,13 @@
         "salary",
         "tax",
         "calculator",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "估算税后工资与个税支出，支持社保公积金扣除",
       "longDescription": "工资计算器可按综合所得月度税率表估算税后到手工资、个税与社保公积金扣除，支持自定义扣除项。",
@@ -1301,7 +1457,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "mortgage-calculator",
@@ -1312,10 +1468,13 @@
         "mortgage",
         "loan",
         "calculator",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "对比等额本息与等额本金，快速估算房贷月供",
       "longDescription": "房贷计算器支持等额本息与等额本金两种方式，计算月供、总利息与还款总额，适合购房预算规划。",
@@ -1326,7 +1485,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "gradient-generator",
@@ -1337,10 +1496,13 @@
         "gradient",
         "color",
         "css",
-        "design"
+        "design",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "生成 CSS 线性渐变并实时预览",
       "longDescription": "渐变色生成器提供色彩与方向控制，实时预览并输出 CSS 渐变代码。",
@@ -1351,7 +1513,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "base32-encode",
@@ -1362,10 +1524,13 @@
         "base32",
         "encode",
         "converter",
-        "text"
+        "text",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将文本编码为 Base32 字符串",
       "longDescription": "Base32 编码工具可以将任意文本编码为 Base32 字符串，适合在不区分大小写的场景中传输。",
@@ -1376,7 +1541,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "base32-decode",
@@ -1387,10 +1552,13 @@
         "base32",
         "decode",
         "converter",
-        "text"
+        "text",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 Base32 字符串解码为文本",
       "longDescription": "Base32 解码工具可以把 Base32 字符串还原为原始文本内容。",
@@ -1401,7 +1569,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "base58-encode",
@@ -1412,10 +1580,13 @@
         "base58",
         "encode",
         "converter",
-        "text"
+        "text",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将文本编码为 Base58 字符串",
       "longDescription": "Base58 编码工具可以将文本编码为不包含易混淆字符的 Base58 字符串。",
@@ -1426,7 +1597,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "base58-decode",
@@ -1437,10 +1608,13 @@
         "base58",
         "decode",
         "converter",
-        "text"
+        "text",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 Base58 字符串解码为文本",
       "longDescription": "Base58 解码工具可以将 Base58 字符串还原为原始文本。",
@@ -1451,7 +1625,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "base64url-encode",
@@ -1462,10 +1636,13 @@
         "base64url",
         "encode",
         "converter",
-        "text"
+        "text",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将文本编码为 URL 安全的 Base64 字符串",
       "longDescription": "Base64 URL 安全编码工具输出适用于 URL 的 Base64 字符串（使用 - 与 _）。",
@@ -1476,7 +1653,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "base64url-decode",
@@ -1487,10 +1664,13 @@
         "base64url",
         "decode",
         "converter",
-        "text"
+        "text",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 Base64URL 字符串解码为文本",
       "longDescription": "Base64 URL 安全解码工具可以恢复 Base64URL 字符串的原始文本。",
@@ -1501,7 +1681,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "hex-encode",
@@ -1512,10 +1692,13 @@
         "hex",
         "encode",
         "converter",
-        "text"
+        "text",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将文本编码为十六进制字符串",
       "longDescription": "HEX 编码工具将文本转换为十六进制编码，适用于调试与数据传输。",
@@ -1526,7 +1709,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "hex-decode",
@@ -1537,10 +1720,13 @@
         "hex",
         "decode",
         "converter",
-        "text"
+        "text",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将十六进制字符串解码为文本",
       "longDescription": "HEX 解码工具将十六进制字符串还原为原始文本内容。",
@@ -1551,7 +1737,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "unicode-escape",
@@ -1562,10 +1748,13 @@
         "unicode",
         "escape",
         "converter",
-        "text"
+        "text",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将文本转义为 Unicode 形式",
       "longDescription": "Unicode 转义工具将字符转换为 \\uXXXX 形式，便于在代码中嵌入。",
@@ -1576,7 +1765,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "unicode-unescape",
@@ -1587,10 +1776,13 @@
         "unicode",
         "unescape",
         "converter",
-        "text"
+        "text",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 Unicode 转义字符串还原为文本",
       "longDescription": "Unicode 反转义工具可将 \\uXXXX 或 \\u{X} 形式的字符串还原为文本。",
@@ -1601,7 +1793,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "rot13",
@@ -1612,10 +1804,13 @@
         "rot13",
         "cipher",
         "text",
-        "encode"
+        "encode",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "使用 ROT13 进行简单文本编码",
       "longDescription": "ROT13 编码工具可快速对英文文本进行 13 位字母移位。",
@@ -1626,7 +1821,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "caesar-cipher",
@@ -1637,10 +1832,13 @@
         "caesar",
         "cipher",
         "text",
-        "encode"
+        "encode",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "使用凯撒密码对文本进行位移加密",
       "longDescription": "凯撒密码工具支持自定义位移量，对英文文本进行加密或解密。",
@@ -1651,7 +1849,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "morse-encode",
@@ -1662,10 +1860,13 @@
         "morse",
         "encode",
         "text",
-        "cipher"
+        "cipher",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将文本编码为摩斯电码",
       "longDescription": "摩斯电码编码工具支持英文与数字的编码输出。",
@@ -1676,7 +1877,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "morse-decode",
@@ -1687,10 +1888,13 @@
         "morse",
         "decode",
         "text",
-        "cipher"
+        "cipher",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将摩斯电码解码为文本",
       "longDescription": "摩斯电码解码工具支持 / 分隔单词。",
@@ -1701,7 +1905,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "binary-encode",
@@ -1712,10 +1916,13 @@
         "binary",
         "encode",
         "text",
-        "converter"
+        "converter",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将文本转换为 8 位二进制编码",
       "longDescription": "文本转二进制工具会把每个字符转换为 8 位二进制，使用空格分隔。",
@@ -1726,7 +1933,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "binary-decode",
@@ -1737,10 +1944,13 @@
         "binary",
         "decode",
         "text",
-        "converter"
+        "converter",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 8 位二进制字符串转换为文本",
       "longDescription": "二进制转文本工具支持用空格分隔的二进制字符串解析。",
@@ -1751,7 +1961,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "html-minifier",
@@ -1762,10 +1972,13 @@
         "html",
         "minifier",
         "compress",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速压缩 HTML 代码，减少空白字符",
       "longDescription": "HTML 压缩器将移除多余空白与注释，生成更紧凑的 HTML。",
@@ -1776,7 +1989,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "js-minifier",
@@ -1787,10 +2000,13 @@
         "javascript",
         "minifier",
         "compress",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "压缩 JavaScript 代码并减少空白",
       "longDescription": "JavaScript 压缩器会移除注释并压缩空白，输出更紧凑的代码。",
@@ -1801,7 +2017,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "sql-minifier",
@@ -1812,10 +2028,13 @@
         "sql",
         "minifier",
         "database",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "压缩 SQL 语句，移除多余空白",
       "longDescription": "SQL 压缩器会移除多余空白和换行，使 SQL 更紧凑。",
@@ -1826,7 +2045,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "json-minifier",
@@ -1837,10 +2056,13 @@
         "json",
         "minifier",
         "developer",
-        "compress"
+        "compress",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "压缩 JSON 输出，去除空白字符",
       "longDescription": "JSON 压缩器可将 JSON 格式化为紧凑的单行输出。",
@@ -1851,7 +2073,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "json-sorter",
@@ -1862,10 +2084,13 @@
         "json",
         "sort",
         "developer",
-        "formatter"
+        "formatter",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "按字母顺序排序 JSON 键名",
       "longDescription": "JSON 键名排序工具可递归排序对象键名，保持 JSON 结构一致。",
@@ -1876,7 +2101,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "xml-formatter",
@@ -1887,10 +2112,13 @@
         "xml",
         "formatter",
         "developer",
-        "beautifier"
+        "beautifier",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "格式化 XML 结构，增加缩进",
       "longDescription": "XML 格式化工具会对 XML 进行缩进和换行，便于阅读。",
@@ -1901,7 +2129,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "xml-minifier",
@@ -1912,10 +2140,13 @@
         "xml",
         "minifier",
         "developer",
-        "compress"
+        "compress",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "压缩 XML 内容，移除多余空白",
       "longDescription": "XML 压缩器会移除多余空白与换行，使 XML 更紧凑。",
@@ -1926,7 +2157,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "yaml-formatter",
@@ -1937,10 +2168,13 @@
         "yaml",
         "formatter",
         "developer",
-        "beautifier"
+        "beautifier",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "格式化 YAML 结构，统一缩进",
       "longDescription": "YAML 格式化工具会解析 YAML 并输出规范缩进的 YAML。",
@@ -1951,7 +2185,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "yaml-minifier",
@@ -1962,10 +2196,13 @@
         "yaml",
         "minifier",
         "developer",
-        "compress"
+        "compress",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "压缩 YAML 内容，移除多余空行",
       "longDescription": "YAML 压缩器会移除注释与多余空行，保持紧凑结构。",
@@ -1976,7 +2213,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "json-to-xml",
@@ -1987,10 +2224,13 @@
         "json",
         "xml",
         "converter",
-        "developer"
+        "developer",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 JSON 数据转换为 XML",
       "longDescription": "JSON 转 XML 工具支持对象与数组结构转换，输出标准 XML。",
@@ -2001,7 +2241,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "yaml-to-json",
@@ -2012,10 +2252,13 @@
         "yaml",
         "json",
         "converter",
-        "developer"
+        "developer",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 YAML 内容转换为 JSON",
       "longDescription": "YAML 转 JSON 工具支持基础 YAML 语法，输出 JSON 格式。",
@@ -2026,7 +2269,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "xml-to-yaml",
@@ -2037,10 +2280,13 @@
         "xml",
         "yaml",
         "converter",
-        "developer"
+        "developer",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 XML 内容转换为 YAML",
       "longDescription": "XML 转 YAML 工具支持基础 XML 结构转换，输出 YAML。",
@@ -2051,7 +2297,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "yaml-to-xml",
@@ -2062,10 +2308,13 @@
         "yaml",
         "xml",
         "converter",
-        "developer"
+        "developer",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 YAML 内容转换为 XML",
       "longDescription": "YAML 转 XML 工具支持基础 YAML 结构转换为 XML。",
@@ -2076,7 +2325,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "csv-to-yaml",
@@ -2087,10 +2336,13 @@
         "csv",
         "yaml",
         "converter",
-        "table"
+        "table",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 CSV 表格转换为 YAML",
       "longDescription": "CSV 转 YAML 工具支持带表头的 CSV 数据转换。",
@@ -2101,7 +2353,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "yaml-to-csv",
@@ -2112,10 +2364,13 @@
         "yaml",
         "csv",
         "converter",
-        "table"
+        "table",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 YAML 数据转换为 CSV",
       "longDescription": "YAML 转 CSV 工具支持数组对象结构转换为 CSV。",
@@ -2126,7 +2381,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "tsv-to-json",
@@ -2137,10 +2392,13 @@
         "tsv",
         "json",
         "converter",
-        "table"
+        "table",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 TSV 表格转换为 JSON",
       "longDescription": "TSV 转 JSON 工具支持制表符分隔的数据转换。",
@@ -2151,7 +2409,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "json-to-tsv",
@@ -2162,10 +2420,13 @@
         "json",
         "tsv",
         "converter",
-        "table"
+        "table",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 JSON 数组转换为 TSV",
       "longDescription": "JSON 转 TSV 工具可将 JSON 数组转换为制表符分隔的文本。",
@@ -2176,7 +2437,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "tsv-to-csv",
@@ -2187,10 +2448,13 @@
         "tsv",
         "csv",
         "converter",
-        "table"
+        "table",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 TSV 表格转换为 CSV",
       "longDescription": "TSV 转 CSV 工具可将制表符分隔内容转换为逗号分隔。",
@@ -2201,7 +2465,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "csv-to-tsv",
@@ -2212,10 +2476,13 @@
         "csv",
         "tsv",
         "converter",
-        "table"
+        "table",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 CSV 表格转换为 TSV",
       "longDescription": "CSV 转 TSV 工具可将逗号分隔内容转换为制表符分隔。",
@@ -2226,7 +2493,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "html-to-text",
@@ -2237,10 +2504,13 @@
         "html",
         "text",
         "converter",
-        "strip"
+        "strip",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "移除 HTML 标签，输出纯文本",
       "longDescription": "HTML 转纯文本工具可提取 HTML 中的文本内容。",
@@ -2251,7 +2521,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-to-html",
@@ -2262,10 +2532,13 @@
         "text",
         "html",
         "converter",
-        "escape"
+        "escape",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将文本转换为 HTML 安全格式",
       "longDescription": "文本转 HTML 工具会转义特殊字符并输出可用的 HTML。",
@@ -2276,7 +2549,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "markdown-to-text",
@@ -2287,10 +2560,13 @@
         "markdown",
         "text",
         "converter",
-        "strip"
+        "strip",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "移除 Markdown 语法，输出纯文本",
       "longDescription": "Markdown 转纯文本工具会移除标题、列表、链接等语法。",
@@ -2301,7 +2577,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "html-to-markdown",
@@ -2312,10 +2588,13 @@
         "html",
         "markdown",
         "converter",
-        "text"
+        "text",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 HTML 结构转换为 Markdown",
       "longDescription": "HTML 转 Markdown 工具支持基础标签转换，便于迁移内容。",
@@ -2326,7 +2605,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "json-to-markdown",
@@ -2337,10 +2616,13 @@
         "json",
         "markdown",
         "table",
-        "converter"
+        "converter",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 JSON 数组转换为 Markdown 表格",
       "longDescription": "JSON 转 Markdown 表格工具支持将 JSON 数组转换为 Markdown 表格格式。",
@@ -2351,7 +2633,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "jwt-generator",
@@ -2362,10 +2644,13 @@
         "jwt",
         "generator",
         "security",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "生成 JSON Web Token（支持 HS256/384/512）",
       "longDescription": "JWT 生成器可输入 Header 与 Payload，使用密钥生成签名并输出完整 Token。",
@@ -2376,7 +2661,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "nanoid-generator",
@@ -2387,10 +2672,13 @@
         "nanoid",
         "generator",
         "developer",
-        "id"
+        "id",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "生成安全短 ID（NanoID）",
       "longDescription": "NanoID 生成器支持自定义长度与字符集，生成随机短 ID。",
@@ -2401,7 +2689,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "ulid-generator",
@@ -2412,10 +2700,13 @@
         "ulid",
         "generator",
         "developer",
-        "id"
+        "id",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "生成可排序的 ULID",
       "longDescription": "ULID 生成器会输出时间有序的唯一标识符。",
@@ -2426,7 +2717,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "gitignore-generator",
@@ -2437,10 +2728,13 @@
         "git",
         "gitignore",
         "generator",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "生成常用项目的 .gitignore 文件",
       "longDescription": "Gitignore 生成器支持多种项目模板，可快速组合生成。",
@@ -2451,7 +2745,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "robots-txt-generator",
@@ -2462,10 +2756,13 @@
         "robots",
         "seo",
         "generator",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "生成 Robots.txt 文件内容",
       "longDescription": "Robots.txt 生成器支持配置 User-agent、Allow、Disallow 与 Sitemap。",
@@ -2476,7 +2773,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "sitemap-generator",
@@ -2487,10 +2784,13 @@
         "sitemap",
         "seo",
         "generator",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "根据 URL 列表生成 sitemap.xml",
       "longDescription": "Sitemap 生成器支持批量 URL 输入，生成标准 XML。",
@@ -2501,7 +2801,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "meta-tags-generator",
@@ -2512,10 +2812,13 @@
         "meta",
         "seo",
         "generator",
-        "developer"
+        "developer",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速生成网页 SEO Meta 标签",
       "longDescription": "Meta 标签生成器支持标题、描述、关键词与 Open Graph 标签生成。",
@@ -2526,7 +2829,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "random-number",
@@ -2537,10 +2840,13 @@
         "random",
         "number",
         "utility",
-        "generator"
+        "generator",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "生成指定范围内的随机数",
       "longDescription": "随机数生成器支持设置最小值、最大值与生成数量。",
@@ -2551,7 +2857,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "random-picker",
@@ -2562,10 +2868,13 @@
         "random",
         "picker",
         "utility",
-        "list"
+        "list",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "从列表中随机抽取项目",
       "longDescription": "随机抽取器支持粘贴名单并设置抽取数量。",
@@ -2576,7 +2885,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "image-rotate",
@@ -2587,10 +2896,13 @@
         "image",
         "rotate",
         "flip",
-        "editor"
+        "editor",
+        "图片处理",
+        "图像工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "旋转图片角度并进行镜像翻转",
       "longDescription": "图片旋转翻转工具支持任意角度旋转与水平/垂直翻转，快速修正图片方向。",
@@ -2601,7 +2913,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "image-watermark",
@@ -2612,10 +2924,13 @@
         "image",
         "watermark",
         "text",
-        "editor"
+        "editor",
+        "图片处理",
+        "图像工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "为图片添加可自定义的文字水印",
       "longDescription": "图片加水印工具支持调整文字内容、透明度、颜色与位置，本地处理更安全。",
@@ -2626,7 +2941,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "image-crop",
@@ -2637,10 +2952,13 @@
         "image",
         "crop",
         "editor",
-        "utility"
+        "utility",
+        "图片处理",
+        "图像工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "按坐标裁剪图片并导出",
       "longDescription": "图片裁剪工具支持输入裁剪宽高与起始坐标，并可一键居中裁剪。",
@@ -2651,7 +2969,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "image-stitch",
@@ -2662,10 +2980,13 @@
         "image",
         "merge",
         "stitch",
-        "editor"
+        "editor",
+        "图片处理",
+        "图像工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将两张图片拼接成一张图",
       "longDescription": "图片拼接工具支持水平或垂直合并两张图片，可选择对齐方式与背景颜色。",
@@ -2676,7 +2997,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "image-filter",
@@ -2687,10 +3008,13 @@
         "image",
         "filter",
         "editor",
-        "adjust"
+        "adjust",
+        "图片处理",
+        "图像工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "调整亮度、对比度与饱和度等参数",
       "longDescription": "图片滤镜工具支持亮度、对比度、饱和度、灰度、复古与模糊等多项参数调节。",
@@ -2701,7 +3025,7 @@
       "createdAt": "2025-12-23",
       "updatedAt": "2025-12-23",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-splitter",
@@ -2712,10 +3036,13 @@
         "text",
         "split",
         "delimiter",
-        "list"
+        "list",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "按分隔符拆分文本并统计结果",
       "longDescription": "文本分割器支持自定义分隔符、忽略空项和清理空白，快速拆分为列表。",
@@ -2726,7 +3053,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-joiner",
@@ -2737,10 +3064,13 @@
         "text",
         "join",
         "delimiter",
-        "list"
+        "list",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将多行文本按分隔符合并为一行",
       "longDescription": "文本合并器可以把多行内容合并为一行，支持自定义分隔符与忽略空行。",
@@ -2751,7 +3081,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-indenter",
@@ -2762,10 +3092,13 @@
         "text",
         "indent",
         "format",
-        "utility"
+        "utility",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "批量增加或移除文本缩进",
       "longDescription": "文本缩进工具支持缩进与反缩进，可自定义空格数量，适合整理代码或清单。",
@@ -2776,7 +3109,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "text-wrapper",
@@ -2787,10 +3120,13 @@
         "text",
         "wrap",
         "format",
-        "layout"
+        "layout",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "按指定宽度自动换行",
       "longDescription": "文本换行器可按指定列宽自动换行，支持拆分长单词，适合整理文档。",
@@ -2801,7 +3137,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "emoji-remover",
@@ -2812,10 +3148,13 @@
         "text",
         "emoji",
         "cleaner",
-        "utility"
+        "utility",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "一键移除文本中的 Emoji 表情",
       "longDescription": "Emoji 清理器可快速移除文本中的 Emoji 表情并统计数量，适合清理内容。",
@@ -2826,7 +3165,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "jsonl-converter",
@@ -2837,10 +3176,13 @@
         "json",
         "jsonl",
         "converter",
-        "developer"
+        "developer",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "在 JSON 数组与 JSONL 之间转换",
       "longDescription": "JSONL 转换器支持 JSON 数组与 JSON Lines 格式互转，适合日志数据处理。",
@@ -2851,7 +3193,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "base36-encode",
@@ -2862,10 +3204,13 @@
         "base36",
         "encode",
         "converter",
-        "number"
+        "number",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将十进制数字转换为 Base36",
       "longDescription": "Base36 编码工具支持大整数转换为 Base36 字符串，适合生成短编号。",
@@ -2876,7 +3221,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "base36-decode",
@@ -2887,10 +3232,13 @@
         "base36",
         "decode",
         "converter",
-        "number"
+        "number",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 Base36 字符串还原为十进制数字",
       "longDescription": "Base36 解码工具将 Base36 字符串还原为十进制数字，支持大整数。",
@@ -2901,7 +3249,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "bytes-converter",
@@ -2912,10 +3260,13 @@
         "bytes",
         "size",
         "converter",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速换算 B/KB/MB/GB/TB",
       "longDescription": "字节大小转换器支持 1000/1024 进制切换，快速换算常用存储单位。",
@@ -2926,7 +3277,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "markdown-table-generator",
@@ -2937,10 +3288,13 @@
         "markdown",
         "table",
         "generator",
-        "text"
+        "text",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将文本快速转换为 Markdown 表格",
       "longDescription": "Markdown 表格生成器支持自定义分隔符和表头，一键生成标准 Markdown 表格。",
@@ -2951,7 +3305,7 @@
       "createdAt": "2025-12-25",
       "updatedAt": "2025-12-25",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "dice-roller",
@@ -2962,10 +3316,13 @@
         "dice",
         "random",
         "game",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "模拟掷骰子，支持多种骰子类型",
       "longDescription": "掷骰子工具支持 D4/D6/D8/D10/D12/D20/D100 多种骰子类型，可同时投掷 1-12 个骰子，适合桌面游戏和角色扮演游戏。",
@@ -2976,7 +3333,7 @@
       "createdAt": "2025-12-31",
       "updatedAt": "2025-12-31",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "draw-lots",
@@ -2987,10 +3344,13 @@
         "fortune",
         "lots",
         "random",
-        "fun"
+        "fun",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "在线抽签工具，支持求运势、做决定、测吉凶",
       "longDescription": "抽签工具支持多种抽签方式，包括求运势（上上签到下下签）、做决定（去做吧/再想想/算了吧）、测吉凶（大吉到大凶），记录抽签历史。",
@@ -3001,7 +3361,7 @@
       "createdAt": "2025-12-31",
       "updatedAt": "2025-12-31",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "rock-paper-scissors",
@@ -3012,10 +3372,13 @@
         "game",
         "rps",
         "fun",
-        "competition"
+        "competition",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "经典猜拳游戏，与电脑对战",
       "longDescription": "石头剪刀布游戏支持与电脑对战，记录胜负平局次数和对战历史，带有动画效果和战绩统计。",
@@ -3026,7 +3389,7 @@
       "createdAt": "2025-12-31",
       "updatedAt": "2025-12-31",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "countdown-timer",
@@ -3037,10 +3400,13 @@
         "timer",
         "countdown",
         "productivity",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "在线倒计时工具，可自定义时间",
       "longDescription": "倒计时器支持自定义时/分/秒，带有可视化进度环显示、快捷预设按钮（1分钟/5分钟/10分钟/30分钟/1小时）、声音提示和浏览器通知。",
@@ -3051,7 +3417,7 @@
       "createdAt": "2025-12-31",
       "updatedAt": "2025-12-31",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "daily-quote",
@@ -3062,10 +3428,13 @@
         "quote",
         "wisdom",
         "motivation",
-        "literature"
+        "literature",
+        "文本处理",
+        "在线排版",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "每日一句名言，点亮人生智慧",
       "longDescription": "每日一言工具精选古今中外经典名言，涵盖人生、成功、智慧、爱情、励志等多个分类，支持分类浏览、随机获取和一键复制。",
@@ -3076,7 +3445,7 @@
       "createdAt": "2025-12-31",
       "updatedAt": "2025-12-31",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "markdown-to-wechat",
@@ -3087,10 +3456,13 @@
         "markdown",
         "wechat",
         "formatter",
-        "article"
+        "article",
+        "在线转换",
+        "格式转换",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "将 Markdown 转换为公众号排版样式，赛博科技蓝色系",
       "longDescription": "将 Markdown 直接转换为公众号友好的排版样式，强调清晰层级与科技蓝色点缀，支持一键复制公众号 HTML。",
@@ -3101,7 +3473,7 @@
       "createdAt": "2026-01-02",
       "updatedAt": "2026-01-02",
       "featured": true,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "qr-decoder",
@@ -3112,10 +3484,13 @@
         "qrcode",
         "decoder",
         "scanner",
-        "utility"
+        "utility",
+        "日常实用",
+        "便民工具",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "上传二维码图片，快速解析其中的内容",
       "longDescription": "二维码解码器可以将二维码图片解析为文本内容，支持上传本地图片或拖拽图片，快速提取二维码中的信息，如网址、文本、联系方式等。",
@@ -3126,7 +3501,7 @@
       "createdAt": "2026-01-02",
       "updatedAt": "2026-01-02",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     },
     {
       "id": "ip-info",
@@ -3137,10 +3512,13 @@
         "ip",
         "network",
         "geolocation",
-        "utility"
+        "utility",
+        "开发者工具",
+        "编程辅助",
+        "纯前端免安装"
       ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
+      "author": "微工坊 TinyTools",
+      "authorUrl": "https://html.tpsh.cc/",
       "version": "1.0.0",
       "description": "快速查询 IP 地址的地理位置、ISP 等信息",
       "longDescription": "IP 地址信息查询工具可以快速查询 IP 地址的详细信息，包括地理位置、时区、ISP、货币等信息。支持查询本机 IP 和指定 IP 地址。",
@@ -3151,33 +3529,7 @@
       "createdAt": "2026-01-02",
       "updatedAt": "2026-01-02",
       "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
-    },
-    {
-      "id": "vehicle-violation-query",
-      "name": "车辆违章查询",
-      "slug": "vehicle-violation-query",
-      "category": "utility",
-      "tags": [
-        "vehicle",
-        "violation",
-        "query",
-        "traffic",
-        "utility"
-      ],
-      "author": "JustHTMLs",
-      "authorUrl": "https://github.com/justhtmls",
-      "version": "1.0.0",
-      "description": "查询车辆交通违章记录的在线工具",
-      "longDescription": "车辆违章查询工具可以帮助您快速查询车辆的交通违章记录，包括闯红灯、超速行驶、违规停车等常见违章行为。支持全国主要城市的车辆查询，显示详细的违章信息、扣分和罚款金额。",
-      "icon": "🚗",
-      "color": "#3b82f6",
-      "entry": "tools/vehicle-violation-query/app.html",
-      "detail": "tools/vehicle-violation-query/index.html",
-      "createdAt": "2026-04-05",
-      "updatedAt": "2026-04-05",
-      "featured": false,
-      "repo": "https://github.com/justhtmls/html-tools"
+      "repo": "https://html.tpsh.cc/"
     }
   ],
   "categories": [

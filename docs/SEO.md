@@ -1,6 +1,6 @@
 # SEO 优化文档
 
-本文档说明 JustHTMLs 网站的 SEO 优化措施和自动更新流程。
+本文档说明微工坊（TinyTools）网站的 SEO 优化措施和自动更新流程。
 
 ## 已实施的 SEO 优化
 
@@ -115,7 +115,7 @@ chmod +x .git/hooks/pre-commit
 1. 在 `index.json` 中添加工具信息（包含 `createdAt` 和 `updatedAt`）
 2. 创建工具页面的 `index.html` 和 `app.html`
 3. 确保两个文件都包含：
-   - `<title>` 标签（格式：`工具名称 - JustHTMLs`）
+   - `<title>` 标签（格式：`工具名称 - 微工坊 TinyTools | 纯前端在线工具`）
    - `<meta name="description">` 标签
    - `<link rel="canonical">` 标签
 4. 运行 `python3 scripts/update_sitemap.py` 更新 sitemap
