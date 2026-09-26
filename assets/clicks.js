@@ -1,4 +1,17 @@
 (function() {
+    // Google tag (gtag.js) for sub-pages and tools
+    if (!window.dataLayer) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DY80W2NJR4');
+
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-DY80W2NJR4';
+        document.head.appendChild(gaScript);
+    }
+
     const path = location.pathname;
     const parts = path.split('/').filter(Boolean);
     const toolsIndex = parts.indexOf('tools');

@@ -12,23 +12,23 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>为什么现代开发者更偏爱纯前端、免安装的轻量在线工具？ - 微工坊 TinyTools 博客</title>
-    <meta name="description" content="探讨在线云端工具与纯前端本地沙箱工具在数据隐私、网络延迟与使用体验上的核心差异，以及微工坊如何保障数据零上传与极速响应。">
-    <meta name="keywords" content="纯前端工具, 在线工具箱, 隐私安全, 开发者效率, 免安装工具">
-    <link rel="canonical" href="https://html.tpsh.cc/blog/why-pure-frontend-tools.html">
+    <title>从浏览器 cURL 到生产代码：多语言请求转换与敏感 Header 防泄漏实战 - 微工坊 TinyTools 博客</title>
+    <meta name="description" content="详细讲解如何将 Chrome / Firefox 开发者工具复制的 cURL 命令高效转换为 JavaScript Fetch、Python Requests、Go net/http 及 Java HttpClient 代码，剖析抓包调试中的敏感 Header 泄漏隐患与纯前端本地转换方案。">
+    <meta name="keywords" content="cURL转代码, curl转python, curl转fetch, curl命令解析, 在线cURL转换, API接口联调, 纯前端工具">
+    <link rel="canonical" href="https://html.tpsh.cc/blog/curl-to-code-converter-multi-language-guide.html">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="微工坊 TinyTools">
-    <meta property="og:url" content="https://html.tpsh.cc/blog/why-pure-frontend-tools.html">
-    <meta property="og:title" content="为什么现代开发者更偏爱纯前端、免安装的轻量在线工具？">
-    <meta property="og:description" content="探讨在线云端工具与纯前端本地沙箱工具在数据隐私、网络延迟与使用体验上的核心差异，以及微工坊如何保障数据零上传与极速响应。">
+    <meta property="og:url" content="https://html.tpsh.cc/blog/curl-to-code-converter-multi-language-guide.html">
+    <meta property="og:title" content="从浏览器 cURL 到生产代码：多语言请求转换与敏感 Header 防泄漏实战">
+    <meta property="og:description" content="详细讲解如何将 Chrome / Firefox 开发者工具复制的 cURL 命令高效转换为 JavaScript Fetch、Python Requests、Go net/http 及 Java HttpClient 代码，剖析抓包调试中的敏感 Header 泄漏隐患与纯前端本地转换方案。">
     <meta property="og:image" content="https://html.tpsh.cc/favicon.svg">
     
     <!-- Twitter Card -->
     <meta property="twitter:card" content="summary">
-    <meta property="twitter:title" content="为什么现代开发者更偏爱纯前端、免安装的轻量在线工具？">
-    <meta property="twitter:description" content="探讨在线云端工具与纯前端本地沙箱工具在数据隐私、网络延迟与使用体验上的核心差异，以及微工坊如何保障数据零上传与极速响应。">
+    <meta property="twitter:title" content="从浏览器 cURL 到生产代码：多语言请求转换与敏感 Header 防泄漏实战">
+    <meta property="twitter:description" content="详细讲解如何将 Chrome / Firefox 开发者工具复制的 cURL 命令高效转换为 JavaScript Fetch、Python Requests、Go net/http 及 Java HttpClient 代码，剖析抓包调试中的敏感 Header 泄漏隐患与纯前端本地转换方案。">
     
     <link rel="icon" href="../favicon.svg">
     <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.min.css">
@@ -38,10 +38,10 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "为什么现代开发者更偏爱纯前端、免安装的轻量在线工具？",
-      "description": "探讨在线云端工具与纯前端本地沙箱工具在数据隐私、网络延迟与使用体验上的核心差异，以及微工坊如何保障数据零上传与极速响应。",
-      "datePublished": "2026-09-25",
-      "dateModified": "2026-09-25",
+      "headline": "从浏览器 cURL 到生产代码：多语言请求转换与敏感 Header 防泄漏实战",
+      "description": "详细讲解如何将 Chrome / Firefox 开发者工具复制的 cURL 命令高效转换为 JavaScript Fetch、Python Requests、Go net/http 及 Java HttpClient 代码，剖析抓包调试中的敏感 Header 泄漏隐患与纯前端本地转换方案。",
+      "datePublished": "2026-09-26",
+      "dateModified": "2026-09-26",
       "author": {
         "@type": "Organization",
         "name": "微工坊 TinyTools",
@@ -55,7 +55,7 @@
           "url": "https://html.tpsh.cc/favicon.svg"
         }
       },
-      "mainEntityOfPage": "https://html.tpsh.cc/blog/why-pure-frontend-tools.html"
+      "mainEntityOfPage": "https://html.tpsh.cc/blog/curl-to-code-converter-multi-language-guide.html"
     }
     </script>
 
@@ -502,57 +502,167 @@
             <span>/</span>
             <a href="index.html">技术博客</a>
             <span>/</span>
-            <span>为什么现代开发者更偏爱纯前端、免安装的轻量在线工具？</span>
+            <span>从浏览器 cURL 到生产代码：多语言请求转换与敏感 Header 防泄漏实战</span>
         </nav>
 
         <article>
             <header class="article-header">
-                <h1 class="article-title">为什么现代开发者更偏爱纯前端、免安装的轻量在线工具？</h1>
+                <h1 class="article-title">从浏览器 cURL 到生产代码：多语言请求转换与敏感 Header 防泄漏实战</h1>
                 <div class="article-meta">
-                    <span class="article-meta-item"><i class="far fa-calendar"></i> 2026-09-25</span>
+                    <span class="article-meta-item"><i class="far fa-calendar"></i> 2026-09-26</span>
                     <span class="article-meta-item"><i class="far fa-user"></i> 微工坊 TinyTools</span>
-                    <span class="article-meta-item"><i class="far fa-clock"></i> 约 6 分钟阅读</span>
+                    <span class="article-meta-item"><i class="far fa-clock"></i> 约 19 分钟阅读</span>
                 </div>
             </header>
 
             <div class="article-content">
-                <p>在日常软件开发、测试与内容运维过程中，每个程序员的书签栏里几乎都收藏着几十个在线小工具：从 <strong>JSON 格式化</strong>、<strong>Base64 编解码</strong>，到 <strong>正则表达式测试</strong> 和 <strong>图片无损压缩</strong>。</p>
-<p>然而，近年来频繁发生的数据合规问题与隐私泄露事件，让越来越多的技术人员开始反思：<strong>那些看似方便的免费在线工具，真的安全吗？</strong></p>
-<hr class="article-divider">
-<h2 id="一-传统服务端工具的隐形风险">一、传统服务端工具的隐形风险</h2>
-<p>当你在搜索引擎随手点开一个排名前列的在线工具时，往往会忽略一个底层事实：<strong>多数网站将你的输入数据直接上传到了他们的后端服务器进行处理</strong>。</p>
-<p>这种架构存在几大无法忽视的隐患：</p>
+                <p>在前后端联调、接口自动化测试以及爬虫逆向分析中，绝大多数开发者的起手式几乎完全一致：</p>
 <ol class="article-list">
-<li><strong>敏感凭据被记录与持久化</strong>：</li>
+<li>打开浏览器开发者工具（F12），切换到 <strong>Network（网络）</strong> 面板；</li>
+<li>触发一次页面交互，在目标请求上右键：<strong>Copy -&gt; Copy as cURL (bash)</strong>；</li>
+<li>将得到的 cURL 命令转录为可在项目工程中直接运行的编程语言代码（如 Python <code>requests</code>、Node.js <code>fetch</code> 或 Go <code>net/http</code>）。</li>
 </ol>
-<p>在格式化配置 JSON 或解码 JWT Token 时，数据中可能包含真实 API Key、生产环境数据库密码或用户个人信息（PII）。如果网站服务端配置了请求日志（Access Logs）甚至错误监控（Sentry），敏感信息就会永久保存在第三方服务器上。</p>
-<ol class="article-list">
-<li><strong>中间人拦截与网络延迟</strong>：</li>
-</ol>
-<p>对于上兆的大文件（如几万行的 JSON 日志或数十兆的图片），反复上传与下载不仅严重依赖网速，耗费时间，更增大了传输过程被嗅探的风险。</p>
-<ol class="article-list">
-<li><strong>服务不稳定与广告轰炸</strong>：</li>
-</ol>
-<p>重度依赖后端 API 的工具站往往伴随着沉重的服务器维护成本，运营方不得不植入大量弹出广告、跳转验证码，极大影响开发专注度。</p>
+<p>这一流程看似简单机械，但在实际工程落地中，却充斥着<strong>请求失败、乱码报错、格式解析崩溃</strong>，以及最容易被忽视的<strong>敏感授权凭据泄露风险</strong>。</p>
+<p>本文将深入拆解从 cURL 转换到生产级代码的核心技术要点，并分享如何在<strong>纯前端、无外网传输</strong>的安全环境下实现多语言秒级转换。</p>
 <hr class="article-divider">
-<h2 id="二-纯前端-client-side-only-架构的降维优势">二、纯前端（Client-Side Only）架构的降维优势</h2>
-<p>所谓<strong>纯前端工具</strong>，是指工具的全部业务逻辑（数据解析、格式校验、编码转换、图形压缩）<strong>完全在用户的本地浏览器沙箱中执行</strong>，服务端仅充当静态文件的分发 CDN。</p>
-<h3 id="1-极致的数据隐私-数据零上传">1. 极致的数据隐私：数据零上传</h3>
-<p>在微工坊（TinyTools）中，所有运算均基于浏览器的原生 JavaScript 引擎与 WebAssembly。你的数据在本地内存中完成计算后即时呈现，没有任何一条字符或字节被发送至任何远程服务器。你可以随时在浏览器的 DevTools -&gt; Network（网络）面板中监控，整个处理过程<strong>0 网络请求（Zero Outgoing Requests）</strong>。</p>
-<h3 id="2-毫秒级极速响应">2. 毫秒级极速响应</h3>
-<p>没有了网络往返延迟（RTT），哪怕解析 100,000 行的 JSON 文本或校验复杂的正则表达式，现代浏览器的 V8 引擎也能在几十毫秒内完成高亮与渲染。</p>
-<h3 id="3-离线可用-开箱即走">3. 离线可用，开箱即走</h3>
-<p>单文件纯前端工具支持本地缓存或离线使用。即使在机房断网、内网隔离或高铁等离线弱网环境下，也能顺畅工作。</p>
-<hr class="article-divider">
-<h2 id="三-微工坊精选轻量工具推荐">三、微工坊精选轻量工具推荐</h2>
-<p>微工坊（TinyTools）严格遵循“纯前端、单文件、无打包干扰、隐私至上”的设计理念，精选了 120+ 款面向开发者与日常办公的高频工具：</p>
+<h2 id="一-警惕-公共-curl-转换工具的安全与合规陷阱">一、警惕：公共 cURL 转换工具的安全与合规陷阱</h2>
+<p>从浏览器直接复制出的 cURL 往往长达数百甚至上千字符，手动排版极其繁琐。许多工程师为了图快，随手将其粘贴至搜索引擎排名前几的“在线 cURL 转代码”工具中。</p>
+<h3 id="1-生产环境授权信息的全盘裸奔">1. 生产环境授权信息的全盘裸奔</h3>
+<p>浏览器生成的 cURL 是一份<strong>100% 完整的网络请求镜像</strong>，里面完整包含了：</p>
 <ul class="article-list">
-<li><strong>JSON 格式化与校验器</strong>：支持树状层级折叠、格式化缩进调整、语法报错定位与一键压缩。</li>
-<li><strong>Base64 实时转换器</strong>：支持文本、URL 安全模式与拖拽文件转换。</li>
-<li><strong>正则表达式测试器</strong>：毫秒级实时正则匹配、捕获组提取与常用表达式速查。</li>
-<li><strong>图片无损压缩工具</strong>：基于前端 Canvas 与现代图像算法，本地压缩 PNG/JPG，不耗费上传流量。</li>
+<li><strong>鉴权凭据</strong>：<code>Authorization: Bearer &lt;JWT/Token&gt;</code> 或 <code>token: xxxxx</code>；</li>
+<li><strong>用户会话</strong>：<code>Cookie: SESSION_ID=...; user_auth=...</code>；</li>
+<li><strong>商业数据与内网地址</strong>：请求 URL 中的内网测试域名、测试租户 ID，以及 POST Body 中的敏感交易参数或个人隐私数据。</li>
 </ul>
-<p>如果你也在寻找一款干净、无广告、不窃取数据的开发工具箱，不妨将微工坊加入收藏夹。</p>
+<p>如果使用的在线工具将输入数据上传到了其后端服务器进行解析，这些高敏感内容就会毫无保留地被第三方服务器的 Nginx Access Log、APM 监控系统以及缓存所持久化。一旦该站点遭遇安全事件，你的系统权限和会话凭据即刻沦陷。</p>
+<h3 id="2-纯前端本地解析-隐私与安全的最优解">2. 纯前端本地解析：隐私与安全的最优解</h3>
+<p>微工坊（TinyTools）的 <strong>CURL 转代码工具</strong> 完全基于浏览器的 JavaScript 引擎在本地运行。数据从粘贴、词法分词、抽象语法解析到目标语言代码生成，<strong>全程在浏览器沙箱内闭环完成，绝无任何网络请求上报</strong>。你可以随时拔掉网线或断开 Wi-Fi 进行离线转换，彻底杜绝数据外泄。</p>
+<hr class="article-divider">
+<h2 id="二-浏览器-curl-的高频-翻车-陷阱与排查技巧">二、浏览器 cURL 的高频“翻车”陷阱与排查技巧</h2>
+<p>直接执行浏览器导出的 cURL 命令，经常会遇到奇怪的报错，核心原因通常有以下三点：</p>
+<h3 id="1-陷阱一-accept-encoding-gzip-deflate-br-引发的乱码悲剧">1. 陷阱一：<code>accept-encoding: gzip, deflate, br</code> 引发的乱码悲剧</h3>
+<p>浏览器复制的 cURL 默认会携带 <code>accept-encoding</code> 头。当你在 Python 或 Go 中原样透传该 Header 时，目标服务器会返回 gzip 或 Brotli 压缩后的<strong>原始二进制流</strong>。若客户端未配置自动解压缩，控制台就会打印出一堆无法识别的乱码乱字符。</p>
+<blockquote class="article-quote"><p><strong>最佳实践</strong>：在转写代码时，应主动剔除 <code>accept-encoding</code> Header，交由现代 HTTP 客户端库（如 Python <code>requests</code> 或 Go 标准库）自动透明处理压缩协商。</p></blockquote>
+<h3 id="2-陷阱二-浏览器冗余指纹请求头-headers-污染">2. 陷阱二：浏览器冗余指纹请求头（Headers 污染）</h3>
+<p>Chrome 会附带十几项诸如 <code>sec-ch-ua</code>、<code>sec-fetch-mode</code>、<code>sec-fetch-site</code> 等客户端专属指纹头。在编写生产后端微服务调用代码时，保留这些头不仅毫无必要，反而可能导致签名校验失败或网关过滤报错。</p>
+<blockquote class="article-quote"><p><strong>建议保留的核心请求头</strong>：</p></blockquote>
+<blockquote class="article-quote"><p>* 协议内容类型：<code>Content-Type</code>（如 <code>application/json</code>）</p></blockquote>
+<blockquote class="article-quote"><p>* 授权凭证：<code>Authorization</code> / <code>Cookie</code> / 自定义 <code>X-Api-Key</code></p></blockquote>
+<blockquote class="article-quote"><p>* 业务路由：<code>User-Agent</code>（按需定制）、<code>Accept</code></p></blockquote>
+<h3 id="3-陷阱三-windows-cmd-与-powershell-的引号转义地狱">3. 陷阱三：Windows CMD 与 PowerShell 的引号转义地狱</h3>
+<p>在 Linux/macOS 的 Bash 环境中，cURL 参数通常使用单引号 <code>'</code> 包裹；而在 Windows CMD 中，单引号会被直接视为字符本身，导致 JSON 参数解析失败并报出 <code>400 Bad Request</code>。如果你的团队跨跨平台协作，使用微工坊的转换工具可以自动抹平平台语法差异。</p>
+<hr class="article-divider">
+<h2 id="三-主流语言生产级代码转换规范">三、主流语言生产级代码转换规范</h2>
+<p>微工坊 <strong>CURL 转代码工具</strong> 支持将 cURL 语法树精准映射到各主流语言的最佳实践写法中。</p>
+<h3 id="1-javascript-typescript-fetch-api">1. JavaScript / TypeScript (Fetch API)</h3>
+<p>遵循现代前端 ES6+ 语法，采用 <code>async/await</code> 与结构化参数：</p>
+<div class="code-block-wrapper"><pre><code class="language-javascript">async function sendRequest() {
+  const url = &#x27;https://api.example.com/v1/orders&#x27;;
+  const headers = {
+    &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
+    &#x27;Authorization&#x27;: &#x27;Bearer YOUR_ACCESS_TOKEN&#x27;
+  };
+  const body = JSON.stringify({
+    productId: &#x27;P10029&#x27;,
+    quantity: 2
+  });
+
+  try {
+    const response = await fetch(url, {
+      method: &#x27;POST&#x27;,
+      headers,
+      body
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    console.log(&#x27;Success:&#x27;, data);
+  } catch (error) {
+    console.error(&#x27;Request failed:&#x27;, error);
+  }
+}</code></pre></div>
+<h3 id="2-python-requests-库">2. Python (Requests 库)</h3>
+<p>自动将 JSON 字符串还原为 Python 原生字典对象，使用 <code>json=</code> 参数确保序列化正确，并显式指定超时时间（Timeout）：</p>
+<div class="code-block-wrapper"><pre><code class="language-python">import requests
+
+url = &quot;https://api.example.com/v1/orders&quot;
+headers = {
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+    &quot;Authorization&quot;: &quot;Bearer YOUR_ACCESS_TOKEN&quot;
+}
+payload = {
+    &quot;productId&quot;: &quot;P10029&quot;,
+    &quot;quantity&quot;: 2
+}
+
+try:
+    response = requests.post(url, json=payload, headers=headers, timeout=10)
+    response.raise_for_status()
+    result = response.json()
+    print(&quot;Result:&quot;, result)
+except requests.exceptions.RequestException as e:
+    print(f&quot;HTTP Request failed: {e}&quot;)</code></pre></div>
+<h3 id="3-go-net-http-标准库">3. Go (net/http 标准库)</h3>
+<p>严格遵循 Go 语言的资源释放习惯，自动生成 <code>defer resp.Body.Close()</code> 与 <code>context</code> 超时控制模板：</p>
+<div class="code-block-wrapper"><pre><code class="language-go">package main
+
+import (
+	&quot;bytes&quot;
+	&quot;context&quot;
+	&quot;encoding/json&quot;
+	&quot;fmt&quot;
+	&quot;io&quot;
+	&quot;net/http&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	url := &quot;https://api.example.com/v1/orders&quot;
+	
+	payloadBytes := []byte(`{&quot;productId&quot;:&quot;P10029&quot;,&quot;quantity&quot;:2}`)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, url, bytes.NewBuffer(payloadBytes))
+	if err != nil {
+		panic(err)
+	}
+
+	req.Header.Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+	req.Header.Set(&quot;Authorization&quot;, &quot;Bearer YOUR_ACCESS_TOKEN&quot;)
+
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		panic(err)
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Printf(&quot;Status: %d, Response: %s\n&quot;, resp.StatusCode, string(body))
+}</code></pre></div>
+<hr class="article-divider">
+<h2 id="四-高效联调-微工坊全套网络辅助工具链">四、高效联调：微工坊全套网络辅助工具链</h2>
+<p>在实际 API 联调过程中，往往不仅需要转换 cURL 命令，还需要配合链路周边的参数排查与状态诊断：</p>
+<ol class="article-list">
+<li><strong>复杂 URL 与查询参数拆解</strong>：如果 cURL 的请求路径中带有大量的 URL Query 参数（如 <code>?filter=all&amp;sort=desc</code>），推荐搭配微工坊的 <strong>URL 解析器</strong>，秒级拆解 Host、Path 与每个键值对；</li>
+<li><strong>中文字符与特殊符号转义</strong>：接口报 400 时，经常是因为 Query 缺少编码。使用 <strong>URL 编码解码</strong> 工具可快速验证字符集合法性；</li>
+<li><strong>HTTP 状态码异常排查</strong>：收到 401、403、422、502 或 504 响应？一键使用 <strong>HTTP 状态码查询</strong>，精准定位网关或微服务报错根因。</li>
+</ol>
+<hr class="article-divider">
+<h2 id="五-总结与最佳实践清单">五、总结与最佳实践清单</h2>
+<ul class="article-list">
+<li><strong>安全红线</strong>：永远不要把包含真实 Session Cookie 或生产 Token 的 cURL 粘贴到不可信的第三方在线工具；</li>
+<li><strong>参数精简</strong>：转换后优先剔除 <code>accept-encoding</code> 以及浏览器 <code>sec-</code> 前缀的无用头信息；</li>
+<li><strong>异常防御</strong>：生成的生产级代码必须补充超时控制（Timeout）与 HTTP 状态码校验；</li>
+<li><strong>善用本地化利器</strong>：收藏微工坊（TinyTools）纯前端工具箱，享受安全、快速、零流量消耗的专业开发体验。</li>
+</ul>
             </div>
 
             
@@ -560,73 +670,73 @@
                 <h3 class="tools-section-title"><i class="fas fa-magic" style="color: #6366f1;"></i> 本文提及与推荐的在线工具</h3>
                 <div class="tools-cta-grid">
                     
-    <div class="embedded-tool-card" style="--card-accent: #667eea;">
-        <div class="tool-card-icon" style="background: #667eea20; color: #667eea;">
-            ✨
+    <div class="embedded-tool-card" style="--card-accent: #f59e0b;">
+        <div class="tool-card-icon" style="background: #f59e0b20; color: #f59e0b;">
+            🧭
         </div>
         <div class="tool-card-body">
             <div class="tool-card-header">
-                <span class="tool-name">JSON 格式化工具</span>
+                <span class="tool-name">CURL 转代码工具</span>
                 <span class="tool-badge">纯前端·免安装</span>
             </div>
-            <p class="tool-desc">格式化、压缩和验证 JSON 数据</p>
+            <p class="tool-desc">将 curl 命令转换成 JavaScript / Python / Java / Go 请求代码</p>
         </div>
         <div class="tool-card-action">
-            <a href="../tools/json-formatter/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+            <a href="../tools/curl-converter/app.html" class="btn-use-tool" target="_blank" rel="noopener">
                 <i class="fas fa-play"></i> 立即使用
             </a>
         </div>
     </div>
     
-    <div class="embedded-tool-card" style="--card-accent: #f093fb;">
-        <div class="tool-card-icon" style="background: #f093fb20; color: #f093fb;">
-            🔐
+    <div class="embedded-tool-card" style="--card-accent: #0ea5e9;">
+        <div class="tool-card-icon" style="background: #0ea5e920; color: #0ea5e9;">
+            🛰️
         </div>
         <div class="tool-card-body">
             <div class="tool-card-header">
-                <span class="tool-name">Base64 编码解码</span>
+                <span class="tool-name">HTTP 状态码查询</span>
                 <span class="tool-badge">纯前端·免安装</span>
             </div>
-            <p class="tool-desc">快速进行 Base64 编码和解码，支持文本和文件</p>
+            <p class="tool-desc">快速查询常见 HTTP 状态码含义</p>
         </div>
         <div class="tool-card-action">
-            <a href="../tools/base64-encode/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+            <a href="../tools/http-status/app.html" class="btn-use-tool" target="_blank" rel="noopener">
                 <i class="fas fa-play"></i> 立即使用
             </a>
         </div>
     </div>
     
-    <div class="embedded-tool-card" style="--card-accent: #a855f7;">
-        <div class="tool-card-icon" style="background: #a855f720; color: #a855f7;">
-            🔍
+    <div class="embedded-tool-card" style="--card-accent: #0ea5e9;">
+        <div class="tool-card-icon" style="background: #0ea5e920; color: #0ea5e9;">
+            🌐
         </div>
         <div class="tool-card-body">
             <div class="tool-card-header">
-                <span class="tool-name">正则表达式测试器</span>
+                <span class="tool-name">URL 解析器</span>
                 <span class="tool-badge">纯前端·免安装</span>
             </div>
-            <p class="tool-desc">实时测试和调试正则表达式，支持所有常用标志位</p>
+            <p class="tool-desc">解析 URL 的各个组成部分</p>
         </div>
         <div class="tool-card-action">
-            <a href="../tools/regex-tester/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+            <a href="../tools/url-parser/app.html" class="btn-use-tool" target="_blank" rel="noopener">
                 <i class="fas fa-play"></i> 立即使用
             </a>
         </div>
     </div>
     
-    <div class="embedded-tool-card" style="--card-accent: #22c55e;">
-        <div class="tool-card-icon" style="background: #22c55e20; color: #22c55e;">
-            🗜️
+    <div class="embedded-tool-card" style="--card-accent: #06b6d4;">
+        <div class="tool-card-icon" style="background: #06b6d420; color: #06b6d4;">
+            🔗
         </div>
         <div class="tool-card-body">
             <div class="tool-card-header">
-                <span class="tool-name">图片压缩工具</span>
+                <span class="tool-name">URL 编码解码</span>
                 <span class="tool-badge">纯前端·免安装</span>
             </div>
-            <p class="tool-desc">本地压缩图片，减少文件体积</p>
+            <p class="tool-desc">快速进行 URL 编码和解码，处理中文和特殊字符</p>
         </div>
         <div class="tool-card-action">
-            <a href="../tools/image-compressor/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+            <a href="../tools/url-encode/app.html" class="btn-use-tool" target="_blank" rel="noopener">
                 <i class="fas fa-play"></i> 立即使用
             </a>
         </div>

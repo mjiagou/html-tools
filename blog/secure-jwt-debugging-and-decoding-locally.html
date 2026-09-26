@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DY80W2NJR4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DY80W2NJR4');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>解密 JWT 调试安全隐患：如何在纯前端无网络环境下安全解码与验证 Token？ - 微工坊 TinyTools 博客</title>
@@ -248,100 +257,83 @@
         }
 
         .article-quote {
-            margin: 24px 0;
-            padding: 16px 20px;
             border-left: 4px solid var(--primary);
             background: var(--bg-card);
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
             color: var(--text-muted);
+            font-style: italic;
         }
 
-        .article-divider {
-            border: 0;
-            height: 1px;
-            background: var(--border);
-            margin: 40px 0;
+        .article-quote p {
+            margin-bottom: 0;
         }
 
         .code-block-wrapper {
-            margin: 20px 0 26px;
-            background: #090d16;
+            background: #1e1e2e;
             border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow-x: auto;
-        }
-
-        [data-theme="light"] .code-block-wrapper {
-            background: #f1f5f9;
-        }
-
-        pre {
+            border-radius: 12px;
             padding: 16px 20px;
-            margin: 0;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            font-size: 14px;
-            line-height: 1.6;
+            margin: 24px 0;
             overflow-x: auto;
         }
 
         code {
-            font-family: inherit;
-        }
-
-        p code, li code {
+            font-family: Consolas, Monaco, "Courier New", monospace;
+            font-size: 14px;
             background: var(--bg-hover);
             padding: 2px 6px;
             border-radius: 4px;
-            font-size: 13.5px;
             color: #ec4899;
+        }
+
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: #e2e8f0;
         }
 
         .table-responsive {
             overflow-x: auto;
-            margin: 24px 0 32px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
+            margin: 28px 0;
         }
 
         .article-table {
             width: 100%;
             border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        .article-table th, .article-table td {
+            padding: 12px 16px;
+            border: 1px solid var(--border);
             text-align: left;
-            font-size: 14px;
         }
 
         .article-table th {
             background: var(--bg-card);
-            padding: 12px 16px;
-            border-bottom: 2px solid var(--border);
-            color: var(--text);
             font-weight: 600;
         }
 
-        .article-table td {
-            padding: 12px 16px;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-muted);
+        .article-table tr:nth-child(even) {
+            background: var(--bg-card);
         }
 
-        .article-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        /* Tools Section */
+        /* Embedded Tool CTA Card */
         .article-tools-section {
-            margin-top: 50px;
+            margin: 48px 0;
             padding: 28px;
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 16px;
+            box-shadow: var(--shadow);
         }
 
         .tools-section-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -349,54 +341,52 @@
 
         .tools-cta-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 16px;
         }
 
         .embedded-tool-card {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 16px 20px;
             background: var(--bg);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.2s;
-            position: relative;
+            transition: all 0.25s ease;
         }
 
         .embedded-tool-card:hover {
-            border-color: var(--primary);
             transform: translateY(-2px);
+            border-color: var(--card-accent);
             box-shadow: var(--shadow);
         }
 
         .tool-card-icon {
-            width: 38px;
-            height: 38px;
+            width: 48px;
+            height: 48px;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            margin-bottom: 12px;
+            font-size: 22px;
+            flex-shrink: 0;
         }
 
         .tool-card-body {
             flex: 1;
-            margin-bottom: 16px;
+            min-width: 0;
         }
 
         .tool-card-header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 6px;
+            gap: 10px;
+            margin-bottom: 4px;
         }
 
         .tool-name {
-            font-weight: 700;
             font-size: 16px;
+            font-weight: 600;
             color: var(--text);
         }
 
@@ -404,42 +394,64 @@
             font-size: 11px;
             background: rgba(99, 102, 241, 0.15);
             color: var(--primary);
-            padding: 2px 6px;
-            border-radius: 4px;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 500;
         }
 
         .tool-desc {
             font-size: 13px;
             color: var(--text-muted);
-            line-height: 1.5;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
+            white-space: nowrap;
             overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 0 !important;
         }
 
         .btn-use-tool {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 6px;
-            width: 100%;
+            padding: 8px 16px;
             background: var(--primary);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 8px 14px;
+            color: #ffffff !important;
             border-radius: 8px;
+            text-decoration: none !important;
             font-size: 13px;
             font-weight: 600;
+            white-space: nowrap;
             transition: background 0.2s;
         }
 
         .btn-use-tool:hover {
             background: var(--primary-dark);
-            text-decoration: none;
         }
 
-        /* Footer */
+        /* Article Footer */
+        .article-footer {
+            margin-top: 48px;
+            padding: 24px 0;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-to-blog:hover {
+            color: var(--primary);
+        }
+
         footer {
             background: var(--bg-card);
             border-top: 1px solid var(--border);
@@ -454,8 +466,16 @@
             .article-title {
                 font-size: 24px;
             }
-            .tools-cta-grid {
-                grid-template-columns: 1fr;
+            .embedded-tool-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .tool-card-action {
+                width: 100%;
+            }
+            .btn-use-tool {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -469,7 +489,7 @@
             </a>
             <div class="header-nav">
                 <a href="../" class="nav-link"><i class="fas fa-home"></i> 首页</a>
-                <a href="index.html" class="nav-link"><i class="fas fa-newspaper"></i> 博客列表</a>
+                <a href="index.html" class="nav-link active"><i class="fas fa-newspaper"></i> 博客列表</a>
                 <a href="../tools-rank.html" class="nav-link"><i class="fas fa-chart-line"></i> 工具排行</a>
                 <button class="theme-btn" id="theme-toggle" title="切换主题"><i class="fas fa-moon"></i></button>
             </div>
@@ -477,30 +497,30 @@
     </header>
 
     <main class="container">
-        <nav class="breadcrumbs">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
             <a href="../"><i class="fas fa-home"></i> 首页</a>
             <span>/</span>
-            <a href="index.html">博客</a>
+            <a href="index.html">技术博客</a>
             <span>/</span>
-            <span>正文</span>
+            <span>解密 JWT 调试安全隐患：如何在纯前端无网络环境下安全解码与验证 Token？</span>
         </nav>
 
-        <article class="article-wrapper">
+        <article>
             <header class="article-header">
                 <h1 class="article-title">解密 JWT 调试安全隐患：如何在纯前端无网络环境下安全解码与验证 Token？</h1>
                 <div class="article-meta">
-                    <span class="article-meta-item"><i class="far fa-user"></i> 微工坊 TinyTools</span>
                     <span class="article-meta-item"><i class="far fa-calendar"></i> 2026-09-25</span>
-                    <span class="article-meta-item"><i class="far fa-clock"></i> 6 分钟阅读</span>
+                    <span class="article-meta-item"><i class="far fa-user"></i> 微工坊 TinyTools</span>
+                    <span class="article-meta-item"><i class="far fa-clock"></i> 约 16 分钟阅读</span>
                 </div>
             </header>
 
             <div class="article-content">
-<p>在微服务架构、前后端分离以及移动端应用中，<strong>JSON Web Token（JWT）</strong> 已经成为事实上的身份认证与授权标准协议。几乎每一个从事接口联调、前端接入或安全运维的工程师，每天都需要频繁面对诸如 <code>Bearer eyJhbGciOi...</code> 这样由三段点号分割的神秘字符串。</p>
+                <p>在微服务架构、前后端分离以及移动端应用中，<strong>JSON Web Token（JWT）</strong> 已经成为事实上的身份认证与授权标准协议。几乎每一个从事接口联调、前端接入或安全运维的工程师，每天都需要频繁面对诸如 <code>Bearer eyJhbGciOi...</code> 这样由三段点号分割的神秘字符串。</p>
 <p>然而，在日常排查 “Token 过期”、“权限不足（403 Forbidden）” 或 “非法令牌（401 Unauthorized）” 时，许多开发者为了图省事，往往习惯直接打开搜索引擎，随手将生产环境抓包拿到的 Token 粘贴到某些不知名的公共在线解码网站中。</p>
 <p>这一看似寻常的操作，实则隐藏着巨大的数据合规与系统安全风险。</p>
 <hr class="article-divider">
-<h2 id="一-警惕-随手粘贴-jwt-的-致命陷阱-">一、警惕：随手粘贴 JWT 的“致命陷阱”</h2>
+<h2 id="一-警惕-随手粘贴-jwt-的-致命陷阱">一、警惕：随手粘贴 JWT 的“致命陷阱”</h2>
 <p>很多开发者存在一个致命的技术误区：<strong>“JWT 既然带有加密签名，那它就是加密的、安全的。”</strong></p>
 <h3 id="1-签名-加密-payload-是明文可读的">1. 签名 ≠ 加密：Payload 是明文可读的</h3>
 <p>标准的 RFC 7519 规范中，绝大多数业务场景使用的都是 <strong>JWS（JSON Web Signature）</strong> 而非 JWE（JSON Web Encryption）。</p>
@@ -515,9 +535,14 @@
 <hr class="article-divider">
 <h2 id="二-rfc-7519-核心解密-jwt-三段式结构剖析">二、RFC 7519 核心解密：JWT 三段式结构剖析</h2>
 <p>理解 JWT 的内部构造，是进行安全调试的前提。一个标准的 JWT 格式形如 <code>xxxxx.yyyyy.zzzzz</code>，由两个句点（<code>.</code>）严格分隔为三个部分：</p>
-<div class="code-block-wrapper"><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTY3MjUwMDAwMCwiZXhwIjoxNjcyNTAzNjAwfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code></pre></div>
-<div class="table-responsive"><table class="article-table"><thead><tr><th>组成部分</th><th>核心作用</th><th>编码/加密方式</th></tr></thead><tbody><tr><td><strong>1. Header（标头）</strong></td><td>声明令牌类型（通常为 <code>JWT</code>）及签名算法（如 <code>HS256</code>、<code>RS256</code>、<code>ES256</code>）</td><td>Base64URL 编码（明文）</td></tr><tr><td><strong>2. Payload（有效载荷）</strong></td><td>承载具体的声明（Claims），包含标准声明（<code>sub</code>、<code>exp</code>、<code>iat</code> 等）与业务自定义键值</td><td>Base64URL 编码（明文）</td></tr><tr><td><strong>3. Signature（签名）</strong></td><td>由服务端使用密钥或私钥，对 <code>Header + "." + Payload</code> 进行哈希计算生成的防篡改凭证</td><td>密码学哈希签名（防伪校验）</td></tr></tbody></table></div>
-<h3 id="关键标准声明速查-standard-claims-">关键标准声明速查（Standard Claims）：</h3>
+<div class="code-block-wrapper"><pre><code class="language-">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTY3MjUwMDAwMCwiZXhwIjoxNjcyNTAzNjAwfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code></pre></div>
+<div class="table-responsive"><table class="article-table">
+<thead><tr><th>组成部分</th><th>核心作用</th><th>编码/加密方式</th></tr></thead><tbody>
+<tr><td><strong>1. Header（标头）</strong></td><td>声明令牌类型（通常为 <code>JWT</code>）及签名算法（如 <code>HS256</code>、<code>RS256</code>、<code>ES256</code>）</td><td>Base64URL 编码（明文）</td></tr>
+<tr><td><strong>2. Payload（有效载荷）</strong></td><td>承载具体的声明（Claims），包含标准声明（<code>sub</code>、<code>exp</code>、<code>iat</code> 等）与业务自定义键值</td><td>Base64URL 编码（明文）</td></tr>
+<tr><td><strong>3. Signature（签名）</strong></td><td>由服务端使用密钥或私钥，对 <code>Header + "." + Payload</code> 进行哈希计算生成的防篡改凭证</td><td>密码学哈希签名（防伪校验）</td></tr>
+</tbody></table></div>
+<h3 id="关键标准声明速查-standard-claims">关键标准声明速查（Standard Claims）：</h3>
 <ul class="article-list">
 <li><code>exp</code> (Expiration Time)：过期时间戳（<strong>必须为秒级 Unix 时间戳</strong>，非毫秒）。</li>
 <li><code>iat</code> (Issued At)：签发时间戳。</li>
@@ -553,7 +578,7 @@
 <li><strong>绝对数据隐私（0 流量上传）</strong>：无论你粘贴的是开发环境测试 Token 还是生产主网应急排查凭证，断网拔掉网线工具依然完美运行！</li>
 </ul>
 <hr class="article-divider">
-<h2 id="四-安全自检指南-如何用-devtools-验证你的工具是-真离线-">四、安全自检指南：如何用 DevTools 验证你的工具是“真离线”？</h2>
+<h2 id="四-安全自检指南-如何用-devtools-验证你的工具是-真离线">四、安全自检指南：如何用 DevTools 验证你的工具是“真离线”？</h2>
 <p>作为严谨的工程师，不应盲信任何第三方平台的口头宣称。你可以通过以下步骤，亲自验证微工坊或其它在线工具的真实安全性：</p>
 <ol class="article-list">
 <li>打开浏览器开发者工具（<code>F12</code> 或 <code>Ctrl+Shift+I</code> / <code>Cmd+Option+I</code>）；</li>
@@ -574,6 +599,7 @@
 </ol>
             </div>
 
+            
             <section class="article-tools-section">
                 <h3 class="tools-section-title"><i class="fas fa-magic" style="color: #6366f1;"></i> 本文提及与推荐的在线工具</h3>
                 <div class="tools-cta-grid">
@@ -587,7 +613,7 @@
                 <span class="tool-name">JWT 解码器</span>
                 <span class="tool-badge">纯前端·免安装</span>
             </div>
-            <p class="tool-desc">解码和验证 JSON Web Token，彩色高亮与过期自动判定</p>
+            <p class="tool-desc">解码和验证 JSON Web Token</p>
         </div>
         <div class="tool-card-action">
             <a href="../tools/jwt-decoder/app.html" class="btn-use-tool" target="_blank" rel="noopener">
@@ -605,7 +631,7 @@
                 <span class="tool-name">JWT 生成器</span>
                 <span class="tool-badge">纯前端·免安装</span>
             </div>
-            <p class="tool-desc">生成 JSON Web Token（支持 HS256/384/512 签名算法）</p>
+            <p class="tool-desc">生成 JSON Web Token（支持 HS256/384/512）</p>
         </div>
         <div class="tool-card-action">
             <a href="../tools/jwt-generator/app.html" class="btn-use-tool" target="_blank" rel="noopener">
@@ -623,7 +649,7 @@
                 <span class="tool-name">Base64 URL 安全解码</span>
                 <span class="tool-badge">纯前端·免安装</span>
             </div>
-            <p class="tool-desc">将 Base64URL 字符串无缝安全解码为原始 UTF-8 文本</p>
+            <p class="tool-desc">将 Base64URL 字符串解码为文本</p>
         </div>
         <div class="tool-card-action">
             <a href="../tools/base64url-decode/app.html" class="btn-use-tool" target="_blank" rel="noopener">
@@ -641,7 +667,7 @@
                 <span class="tool-name">哈希生成器</span>
                 <span class="tool-badge">纯前端·免安装</span>
             </div>
-            <p class="tool-desc">计算文本的 MD5、SHA-1、SHA-256、SHA-512 等哈希值</p>
+            <p class="tool-desc">计算文本的 MD5、SHA-1、SHA-256 等哈希值</p>
         </div>
         <div class="tool-card-action">
             <a href="../tools/hash-generator/app.html" class="btn-use-tool" target="_blank" rel="noopener">
@@ -652,6 +678,16 @@
     
                 </div>
             </section>
+            
+
+            <div class="article-footer">
+                <a href="index.html" class="back-to-blog">
+                    <i class="fas fa-arrow-left"></i> 返回博客文章列表
+                </a>
+                <a href="../" class="btn-use-tool" style="background: var(--bg-hover); color: var(--text) !important;">
+                    <i class="fas fa-th-large"></i> 浏览微工坊全部工具
+                </a>
+            </div>
         </article>
     </main>
 
