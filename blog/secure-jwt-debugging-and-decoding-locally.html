@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解密 JWT 调试安全隐患：如何在纯前端无网络环境下安全解码与验证 Token？ - 微工坊 TinyTools 博客</title>
+    <meta name="description" content="深入剖析在线调试 JWT Token 时的敏感凭证泄露隐患，详解 JWT Header 与 Payload 结构原理，并提供基于浏览器本地纯前端沙箱的安全解码与时效验证实践指南。">
+    <meta name="keywords" content="JWT解码, JWT调试, JWT安全性, 本地JWT解析, 纯前端JWT, RFC7519, Base64URL解码">
+    <link rel="canonical" href="https://html.tpsh.cc/blog/secure-jwt-debugging-and-decoding-locally.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="微工坊 TinyTools">
+    <meta property="og:url" content="https://html.tpsh.cc/blog/secure-jwt-debugging-and-decoding-locally.html">
+    <meta property="og:title" content="解密 JWT 调试安全隐患：如何在纯前端无网络环境下安全解码与验证 Token？">
+    <meta property="og:description" content="深入剖析在线调试 JWT Token 时的敏感凭证泄露隐患，详解 JWT Header 与 Payload 结构原理，并提供基于浏览器本地纯前端沙箱的安全解码与时效验证实践指南。">
+    <meta property="og:image" content="https://html.tpsh.cc/favicon.svg">
+    
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="解密 JWT 调试安全隐患：如何在纯前端无网络环境下安全解码与验证 Token？">
+    <meta property="twitter:description" content="深入剖析在线调试 JWT Token 时的敏感凭证泄露隐患，详解 JWT Header 与 Payload 结构原理，并提供基于浏览器本地纯前端沙箱的安全解码与时效验证实践指南。">
+    
+    <link rel="icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.min.css">
+    
+    <!-- Structured Data (Article Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "解密 JWT 调试安全隐患：如何在纯前端无网络环境下安全解码与验证 Token？",
+      "description": "深入剖析在线调试 JWT Token 时的敏感凭证泄露隐患，详解 JWT Header 与 Payload 结构原理，并提供基于浏览器本地纯前端沙箱的安全解码与时效验证实践指南。",
+      "datePublished": "2026-09-25",
+      "dateModified": "2026-09-25",
+      "author": {
+        "@type": "Organization",
+        "name": "微工坊 TinyTools",
+        "url": "https://html.tpsh.cc/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "微工坊 TinyTools",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://html.tpsh.cc/favicon.svg"
+        }
+      },
+      "mainEntityOfPage": "https://html.tpsh.cc/blog/secure-jwt-debugging-and-decoding-locally.html"
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --bg: #0f172a;
+            --bg-card: #1e293b;
+            --bg-hover: #334155;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+            --content-width: 820px;
+        }
+
+        [data-theme="light"] {
+            --bg: #ffffff;
+            --bg-card: #f8fafc;
+            --bg-hover: #e2e8f0;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .theme-btn {
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 24px 0 12px;
+            font-size: 14px;
+            color: var(--text-muted);
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--primary);
+        }
+
+        /* Article Header */
+        .article-header {
+            padding: 24px 0 32px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 36px;
+        }
+
+        .article-title {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.35;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .article-meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Article Content */
+        .article-content {
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .article-content p {
+            margin-bottom: 22px;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .article-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 40px 0 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+            color: var(--text);
+        }
+
+        .article-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 30px 0 14px;
+            color: var(--text);
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 0 0 24px 28px;
+            line-height: 1.8;
+        }
+
+        .article-content li {
+            margin-bottom: 8px;
+        }
+
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .article-quote {
+            margin: 24px 0;
+            padding: 16px 20px;
+            border-left: 4px solid var(--primary);
+            background: var(--bg-card);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .article-divider {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 40px 0;
+        }
+
+        .code-block-wrapper {
+            margin: 20px 0 26px;
+            background: #090d16;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        [data-theme="light"] .code-block-wrapper {
+            background: #f1f5f9;
+        }
+
+        pre {
+            padding: 16px 20px;
+            margin: 0;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: inherit;
+        }
+
+        p code, li code {
+            background: var(--bg-hover);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13.5px;
+            color: #ec4899;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 24px 0 32px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .article-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .article-table th {
+            background: var(--bg-card);
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--border);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .article-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        .article-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Tools Section */
+        .article-tools-section {
+            margin-top: 50px;
+            padding: 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+
+        .tools-section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tools-cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .embedded-tool-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .embedded-tool-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .tool-card-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .tool-card-body {
+            flex: 1;
+            margin-bottom: 16px;
+        }
+
+        .tool-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .tool-name {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .tool-badge {
+            font-size: 11px;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .tool-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .btn-use-tool {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 100%;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-use-tool:hover {
+            background: var(--primary-dark);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 640px) {
+            .article-title {
+                font-size: 24px;
+            }
+            .tools-cta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="../" class="logo">
+                <img src="../favicon.svg" alt="微工坊 Logo" style="width:34px;height:34px;">
+                <span class="logo-text">微工坊 <span style="font-size:12px;font-weight:400;opacity:0.8;">Blog</span></span>
+            </a>
+            <div class="header-nav">
+                <a href="../" class="nav-link"><i class="fas fa-home"></i> 首页</a>
+                <a href="index.html" class="nav-link"><i class="fas fa-newspaper"></i> 博客列表</a>
+                <a href="../tools-rank.html" class="nav-link"><i class="fas fa-chart-line"></i> 工具排行</a>
+                <button class="theme-btn" id="theme-toggle" title="切换主题"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumbs">
+            <a href="../"><i class="fas fa-home"></i> 首页</a>
+            <span>/</span>
+            <a href="index.html">博客</a>
+            <span>/</span>
+            <span>正文</span>
+        </nav>
+
+        <article class="article-wrapper">
+            <header class="article-header">
+                <h1 class="article-title">解密 JWT 调试安全隐患：如何在纯前端无网络环境下安全解码与验证 Token？</h1>
+                <div class="article-meta">
+                    <span class="article-meta-item"><i class="far fa-user"></i> 微工坊 TinyTools</span>
+                    <span class="article-meta-item"><i class="far fa-calendar"></i> 2026-09-25</span>
+                    <span class="article-meta-item"><i class="far fa-clock"></i> 6 分钟阅读</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+<p>在微服务架构、前后端分离以及移动端应用中，<strong>JSON Web Token（JWT）</strong> 已经成为事实上的身份认证与授权标准协议。几乎每一个从事接口联调、前端接入或安全运维的工程师，每天都需要频繁面对诸如 <code>Bearer eyJhbGciOi...</code> 这样由三段点号分割的神秘字符串。</p>
+<p>然而，在日常排查 “Token 过期”、“权限不足（403 Forbidden）” 或 “非法令牌（401 Unauthorized）” 时，许多开发者为了图省事，往往习惯直接打开搜索引擎，随手将生产环境抓包拿到的 Token 粘贴到某些不知名的公共在线解码网站中。</p>
+<p>这一看似寻常的操作，实则隐藏着巨大的数据合规与系统安全风险。</p>
+<hr class="article-divider">
+<h2 id="一-警惕-随手粘贴-jwt-的-致命陷阱-">一、警惕：随手粘贴 JWT 的“致命陷阱”</h2>
+<p>很多开发者存在一个致命的技术误区：<strong>“JWT 既然带有加密签名，那它就是加密的、安全的。”</strong></p>
+<h3 id="1-签名-加密-payload-是明文可读的">1. 签名 ≠ 加密：Payload 是明文可读的</h3>
+<p>标准的 RFC 7519 规范中，绝大多数业务场景使用的都是 <strong>JWS（JSON Web Signature）</strong> 而非 JWE（JSON Web Encryption）。</p>
+<p>这意味着：<strong>JWT 内部的 Header 和 Payload 仅仅是经过了 Base64URL 编码，并没有进行任何对称或非对称加密！</strong> 任何人只要截获了这段字符串，就能在 1 毫秒内还原出其中的所有原始 JSON 数据。</p>
+<h3 id="2-公共在线解码站的潜在威胁">2. 公共在线解码站的潜在威胁</h3>
+<p>当你把包含真实业务数据的 Token 粘贴进不可控的第三方网站时，可能发生以下隐患：</p>
+<ul class="article-list">
+<li><strong>企业核心凭据持久化泄漏</strong>：许多公共工具站背后部署了反向代理日志（Nginx Access Logs）、请求跟踪中间件（APM）以及异常监控（如 Sentry）。如果该工具采用的是“服务端解析”方案，你的 Token 就会以明文请求体的形式被持久化记录在第三方的服务器硬盘中。</li>
+<li><strong>敏感身份与业务拓扑暴露</strong>：企业的 JWT Payload 中往往包含 <code>user_id</code>、手机号、企业租户标识 <code>tenant_id</code>、用户角色数组 <code>roles</code>，甚至某些团队直接把内网服务地址或数据权限白名单塞入 Claims。第三方一旦遭遇拖库或恶意窃密，攻击者就能顺藤摸瓜掌握系统的组织架构与认证机制。</li>
+<li><strong>重放攻击与越权操作</strong>：对于长生命周期的 Token（如未设置短过期时间，或缺少单点吊销机制的刷新令牌），获取到 Token 的攻击者可以直接伪造请求访问你的业务 API。</li>
+</ul>
+<hr class="article-divider">
+<h2 id="二-rfc-7519-核心解密-jwt-三段式结构剖析">二、RFC 7519 核心解密：JWT 三段式结构剖析</h2>
+<p>理解 JWT 的内部构造，是进行安全调试的前提。一个标准的 JWT 格式形如 <code>xxxxx.yyyyy.zzzzz</code>，由两个句点（<code>.</code>）严格分隔为三个部分：</p>
+<div class="code-block-wrapper"><pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTY3MjUwMDAwMCwiZXhwIjoxNjcyNTAzNjAwfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code></pre></div>
+<div class="table-responsive"><table class="article-table"><thead><tr><th>组成部分</th><th>核心作用</th><th>编码/加密方式</th></tr></thead><tbody><tr><td><strong>1. Header（标头）</strong></td><td>声明令牌类型（通常为 <code>JWT</code>）及签名算法（如 <code>HS256</code>、<code>RS256</code>、<code>ES256</code>）</td><td>Base64URL 编码（明文）</td></tr><tr><td><strong>2. Payload（有效载荷）</strong></td><td>承载具体的声明（Claims），包含标准声明（<code>sub</code>、<code>exp</code>、<code>iat</code> 等）与业务自定义键值</td><td>Base64URL 编码（明文）</td></tr><tr><td><strong>3. Signature（签名）</strong></td><td>由服务端使用密钥或私钥，对 <code>Header + "." + Payload</code> 进行哈希计算生成的防篡改凭证</td><td>密码学哈希签名（防伪校验）</td></tr></tbody></table></div>
+<h3 id="关键标准声明速查-standard-claims-">关键标准声明速查（Standard Claims）：</h3>
+<ul class="article-list">
+<li><code>exp</code> (Expiration Time)：过期时间戳（<strong>必须为秒级 Unix 时间戳</strong>，非毫秒）。</li>
+<li><code>iat</code> (Issued At)：签发时间戳。</li>
+<li><code>nbf</code> (Not Before)：在此时间戳之前该 Token 不生效。</li>
+<li><code>sub</code> (Subject)：该 Token 代表的主体（通常为用户唯一标识 ID）。</li>
+<li><code>iss</code> (Issuer)：签发者标识。</li>
+</ul>
+<blockquote class="article-quote"><p><strong>踩坑预警</strong>：JavaScript 的 <code>Date.now()</code> 返回的是<strong>毫秒</strong>，而 JWT 标准规范 <code>exp</code> 和 <code>iat</code> 定义的是<strong>秒</strong>。在手动构建或验证时，若忘记乘除 1000，会导致 Token 瞬间失效或有效期长达千年。</p></blockquote>
+<hr class="article-divider">
+<h2 id="三-纯前端离线沙箱-微工坊-jwt-解码工具的技术实现">三、纯前端离线沙箱：微工坊 JWT 解码工具的技术实现</h2>
+<p>为了从根本上消除凭证上传风险，微工坊（TinyTools）推出了 <strong>纯前端本地 JWT 解码器</strong>。所有解析过程严格受限于浏览器沙箱内部，不向外发送任何网络数据包。</p>
+<h3 id="1-纯本地-base64url-解码原理">1. 纯本地 Base64URL 解码原理</h3>
+<p>Base64URL 是针对 URL 参数定制的 Base64 变体（将 <code>+</code> 替换为 <code>-</code>，<code>/</code> 替换为 <code>_</code>，并省略末尾的 <code>=</code> 填充符）。在纯前端环境下，微工坊采用原生高效算法实现零依赖解码：</p>
+<div class="code-block-wrapper"><pre><code class="language-javascript">function decodeBase64Url(base64UrlStr) {
+    // 1. 将 Base64URL 字符映射回标准 Base64 字符
+    let base64 = base64UrlStr.replace(/-/g, &#x27;+&#x27;).replace(/_/g, &#x27;/&#x27;);
+    
+    // 2. 补齐末尾缺失的 &#x27;=&#x27; 填充符
+    while (base64.length % 4 !== 0) {
+        base64 += &#x27;=&#x27;;
+    }
+    
+    // 3. 避免 UTF-8 中文多字节字符乱码，安全解码为原始字符串
+    const rawData = atob(base64);
+    const utf8Bytes = Uint8Array.from(rawData, c =&gt; c.charCodeAt(0));
+    return new TextDecoder().decode(utf8Bytes);
+}</code></pre></div>
+<h3 id="2-核心调试功能特性">2. 核心调试功能特性</h3>
+<ul class="article-list">
+<li><strong>彩色分段即时可视化</strong>：将 Header、Payload、Signature 分别以红、紫、蓝三色高亮映射，结构一目了然。</li>
+<li><strong>智能过期时间倒计时</strong>：自动解析 <code>exp</code> 声明并比对当前系统本地时间，实时提示“已过期 XX 分钟”或“距离失效还剩 XX 小时”，杜绝口头推算失误。</li>
+<li><strong>中文与复杂 JSON 深度格式化</strong>：自动规整缩进，支持嵌套多层对象展开，遇到语法异常精准红字报错。</li>
+<li><strong>绝对数据隐私（0 流量上传）</strong>：无论你粘贴的是开发环境测试 Token 还是生产主网应急排查凭证，断网拔掉网线工具依然完美运行！</li>
+</ul>
+<hr class="article-divider">
+<h2 id="四-安全自检指南-如何用-devtools-验证你的工具是-真离线-">四、安全自检指南：如何用 DevTools 验证你的工具是“真离线”？</h2>
+<p>作为严谨的工程师，不应盲信任何第三方平台的口头宣称。你可以通过以下步骤，亲自验证微工坊或其它在线工具的真实安全性：</p>
+<ol class="article-list">
+<li>打开浏览器开发者工具（<code>F12</code> 或 <code>Ctrl+Shift+I</code> / <code>Cmd+Option+I</code>）；</li>
+<li>切换到 <strong>Network（网络）</strong> 标签页，并勾选 <strong>Preserve log（保留日志）</strong>；</li>
+<li>将你的 JWT 粘贴到微工坊的 <strong>JWT 解码器</strong> 输入框中；</li>
+<li>观察 Network 面板：<strong>请求列表空空如也，无任何 XHR、Fetch 或 WebSocket 外发请求</strong>；</li>
+<li>你甚至可以点击 Network 顶部的 <strong>Offline（离线模式）</strong>，工具的所有解码与格式化功能照样秒级响应。</li>
+</ol>
+<hr class="article-divider">
+<h2 id="五-开发与生产环境-jwt-安全最佳实践清单">五、开发与生产环境 JWT 安全最佳实践清单</h2>
+<p>在排查调试之余，设计安全健壮的 JWT 架构同样至关重要：</p>
+<ol class="article-list">
+<li><strong>绝对不要在 Payload 中存放密码、密钥或高度敏感的个人金融信息</strong>；</li>
+<li><strong>坚持使用短期 Access Token（建议 15~30 分钟）配合后端安全黑名单/Redis 校验</strong>；</li>
+<li><strong>强密钥策略</strong>：若采用对称加密（HS256），密钥长度必须达到 256 位以上随机字符串，防止被离线哈希字典爆破；</li>
+<li><strong>统一签名算法白名单</strong>：在服务端校验代码中严格锁定算法（例如显式声明仅允许 <code>HS256</code>），防止攻击者将 Header 中的 <code>alg</code> 改为 <code>none</code> 实现越权登录；</li>
+<li><strong>本地开发善用微工坊</strong>：在微工坊中，不仅支持快速解码查看，还提供 <strong>JWT 生成器</strong> 与 <strong>哈希生成器</strong>，帮助你一站式完成签名算法验算与本地 Mock 测试。</li>
+</ol>
+            </div>
+
+            <section class="article-tools-section">
+                <h3 class="tools-section-title"><i class="fas fa-magic" style="color: #6366f1;"></i> 本文提及与推荐的在线工具</h3>
+                <div class="tools-cta-grid">
+                    
+    <div class="embedded-tool-card" style="--card-accent: #764ba2;">
+        <div class="tool-card-icon" style="background: #764ba220; color: #764ba2;">
+            🔑
+        </div>
+        <div class="tool-card-body">
+            <div class="tool-card-header">
+                <span class="tool-name">JWT 解码器</span>
+                <span class="tool-badge">纯前端·免安装</span>
+            </div>
+            <p class="tool-desc">解码和验证 JSON Web Token，彩色高亮与过期自动判定</p>
+        </div>
+        <div class="tool-card-action">
+            <a href="../tools/jwt-decoder/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+                <i class="fas fa-play"></i> 立即使用
+            </a>
+        </div>
+    </div>
+    
+    <div class="embedded-tool-card" style="--card-accent: #ef4444;">
+        <div class="tool-card-icon" style="background: #ef444420; color: #ef4444;">
+            🔐
+        </div>
+        <div class="tool-card-body">
+            <div class="tool-card-header">
+                <span class="tool-name">JWT 生成器</span>
+                <span class="tool-badge">纯前端·免安装</span>
+            </div>
+            <p class="tool-desc">生成 JSON Web Token（支持 HS256/384/512 签名算法）</p>
+        </div>
+        <div class="tool-card-action">
+            <a href="../tools/jwt-generator/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+                <i class="fas fa-play"></i> 立即使用
+            </a>
+        </div>
+    </div>
+    
+    <div class="embedded-tool-card" style="--card-accent: #ec4899;">
+        <div class="tool-card-icon" style="background: #ec489920; color: #ec4899;">
+            🔗
+        </div>
+        <div class="tool-card-body">
+            <div class="tool-card-header">
+                <span class="tool-name">Base64 URL 安全解码</span>
+                <span class="tool-badge">纯前端·免安装</span>
+            </div>
+            <p class="tool-desc">将 Base64URL 字符串无缝安全解码为原始 UTF-8 文本</p>
+        </div>
+        <div class="tool-card-action">
+            <a href="../tools/base64url-decode/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+                <i class="fas fa-play"></i> 立即使用
+            </a>
+        </div>
+    </div>
+    
+    <div class="embedded-tool-card" style="--card-accent: #764ba2;">
+        <div class="tool-card-icon" style="background: #764ba220; color: #764ba2;">
+            🔐
+        </div>
+        <div class="tool-card-body">
+            <div class="tool-card-header">
+                <span class="tool-name">哈希生成器</span>
+                <span class="tool-badge">纯前端·免安装</span>
+            </div>
+            <p class="tool-desc">计算文本的 MD5、SHA-1、SHA-256、SHA-512 等哈希值</p>
+        </div>
+        <div class="tool-card-action">
+            <a href="../tools/hash-generator/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+                <i class="fas fa-play"></i> 立即使用
+            </a>
+        </div>
+    </div>
+    
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 微工坊 TinyTools (html.tpsh.cc) · 纯前端轻量工具集合平台</p>
+        </div>
+    </footer>
+
+    <script>
+        const currentTheme = localStorage.getItem('justhtmls-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.innerHTML = currentTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        
+        themeBtn.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            const nextTheme = isLight ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('justhtmls-theme', nextTheme);
+            themeBtn.innerHTML = nextTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+    </script>
+</body>
+</html>
