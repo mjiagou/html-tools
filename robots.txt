@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+# Prevent search engines from crawling maintenance scripts and raw data files
+Disallow: /scripts/
+Disallow: /*.json$
+Disallow: /google*.html
+
 # Sitemap
 Sitemap: https://html.tpsh.cc/sitemap.xml
-

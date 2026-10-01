@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DY80W2NJR4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DY80W2NJR4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业级 SQL 排版与审计：纯前端格式化如何守护核心数据库结构？ - 微工坊 TinyTools 博客</title>
+    <meta name="description" content="深入剖析生产环境复杂 SQL 在线排版时的商业机密泄露风险，详解嵌套子查询与多表关联的美化与压缩原理，并提供基于纯前端本地沙箱的 SQL 格式化与文本 Diff 审计最佳实践。">
+    <meta name="keywords" content="SQL在线美化, SQL格式化工具, SQL压缩, 数据库脱敏排版, 生产SQL审计, 纯前端工具, SQL排版技巧">
+    <link rel="canonical" href="https://html.tpsh.cc/blog/sql-formatter-and-minifier-database-security.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="微工坊 TinyTools">
+    <meta property="og:url" content="https://html.tpsh.cc/blog/sql-formatter-and-minifier-database-security.html">
+    <meta property="og:title" content="企业级 SQL 排版与审计：纯前端格式化如何守护核心数据库结构？">
+    <meta property="og:description" content="深入剖析生产环境复杂 SQL 在线排版时的商业机密泄露风险，详解嵌套子查询与多表关联的美化与压缩原理，并提供基于纯前端本地沙箱的 SQL 格式化与文本 Diff 审计最佳实践。">
+    <meta property="og:image" content="https://html.tpsh.cc/favicon.svg">
+    
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="企业级 SQL 排版与审计：纯前端格式化如何守护核心数据库结构？">
+    <meta property="twitter:description" content="深入剖析生产环境复杂 SQL 在线排版时的商业机密泄露风险，详解嵌套子查询与多表关联的美化与压缩原理，并提供基于纯前端本地沙箱的 SQL 格式化与文本 Diff 审计最佳实践。">
+    
+    <link rel="icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.min.css">
+    
+    <!-- Structured Data (Article Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "企业级 SQL 排版与审计：纯前端格式化如何守护核心数据库结构？",
+      "description": "深入剖析生产环境复杂 SQL 在线排版时的商业机密泄露风险，详解嵌套子查询与多表关联的美化与压缩原理，并提供基于纯前端本地沙箱的 SQL 格式化与文本 Diff 审计最佳实践。",
+      "datePublished": "2026-09-30",
+      "dateModified": "2026-09-30",
+      "author": {
+        "@type": "Organization",
+        "name": "微工坊 TinyTools",
+        "url": "https://html.tpsh.cc/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "微工坊 TinyTools",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://html.tpsh.cc/favicon.svg"
+        }
+      },
+      "mainEntityOfPage": "https://html.tpsh.cc/blog/sql-formatter-and-minifier-database-security.html"
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --bg: #0f172a;
+            --bg-card: #1e293b;
+            --bg-hover: #334155;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+            --content-width: 820px;
+        }
+
+        [data-theme="light"] {
+            --bg: #ffffff;
+            --bg-card: #f8fafc;
+            --bg-hover: #e2e8f0;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .theme-btn {
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 24px 0 12px;
+            font-size: 14px;
+            color: var(--text-muted);
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--primary);
+        }
+
+        /* Article Header */
+        .article-header {
+            padding: 24px 0 32px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 36px;
+        }
+
+        .article-title {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.35;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .article-meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Article Content */
+        .article-content {
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .article-content p {
+            margin-bottom: 22px;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .article-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 40px 0 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+            color: var(--text);
+        }
+
+        .article-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 30px 0 14px;
+            color: var(--text);
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 0 0 24px 28px;
+            line-height: 1.8;
+        }
+
+        .article-content li {
+            margin-bottom: 8px;
+        }
+
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .article-quote {
+            border-left: 4px solid var(--primary);
+            background: var(--bg-card);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .article-quote p {
+            margin-bottom: 0;
+        }
+
+        .code-block-wrapper {
+            background: #1e1e2e;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 24px 0;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: Consolas, Monaco, "Courier New", monospace;
+            font-size: 14px;
+            background: var(--bg-hover);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #ec4899;
+        }
+
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: #e2e8f0;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 28px 0;
+        }
+
+        .article-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        .article-table th, .article-table td {
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .article-table th {
+            background: var(--bg-card);
+            font-weight: 600;
+        }
+
+        .article-table tr:nth-child(even) {
+            background: var(--bg-card);
+        }
+
+        /* Embedded Tool CTA Card */
+        .article-tools-section {
+            margin: 48px 0;
+            padding: 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .tools-section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tools-cta-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .embedded-tool-card {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 16px 20px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.25s ease;
+        }
+
+        .embedded-tool-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--card-accent);
+            box-shadow: var(--shadow);
+        }
+
+        .tool-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .tool-card-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .tool-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .tool-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .tool-badge {
+            font-size: 11px;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .tool-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 0 !important;
+        }
+
+        .btn-use-tool {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--primary);
+            color: #ffffff !important;
+            border-radius: 8px;
+            text-decoration: none !important;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .btn-use-tool:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Article Footer */
+        .article-footer {
+            margin-top: 48px;
+            padding: 24px 0;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-to-blog:hover {
+            color: var(--primary);
+        }
+
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 640px) {
+            .article-title {
+                font-size: 24px;
+            }
+            .embedded-tool-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .tool-card-action {
+                width: 100%;
+            }
+            .btn-use-tool {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="../" class="logo">
+                <img src="../favicon.svg" alt="微工坊 Logo" style="width:34px;height:34px;">
+                <span class="logo-text">微工坊 <span style="font-size:12px;font-weight:400;opacity:0.8;">Blog</span></span>
+            </a>
+            <div class="header-nav">
+                <a href="../" class="nav-link"><i class="fas fa-home"></i> 首页</a>
+                <a href="index.html" class="nav-link active"><i class="fas fa-newspaper"></i> 博客列表</a>
+                <a href="../tools-rank.html" class="nav-link"><i class="fas fa-chart-line"></i> 工具排行</a>
+                <button class="theme-btn" id="theme-toggle" title="切换主题"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="../"><i class="fas fa-home"></i> 首页</a>
+            <span>/</span>
+            <a href="index.html">技术博客</a>
+            <span>/</span>
+            <span>企业级 SQL 排版与审计：纯前端格式化如何守护核心数据库结构？</span>
+        </nav>
+
+        <article>
+            <header class="article-header">
+                <h1 class="article-title">企业级 SQL 排版与审计：纯前端格式化如何守护核心数据库结构？</h1>
+                <div class="article-meta">
+                    <span class="article-meta-item"><i class="far fa-calendar"></i> 2026-09-30</span>
+                    <span class="article-meta-item"><i class="far fa-user"></i> 微工坊 TinyTools</span>
+                    <span class="article-meta-item"><i class="far fa-clock"></i> 约 13 分钟阅读</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <p>在后端开发、数据库运维（DBA）以及数据分析的日常工作中，排查数据库性能瓶颈几乎是每个技术团队的高频任务。当监控告警系统弹出一条“慢查询告警（Slow Query Alert）”或“死锁检测告警（Deadlock Detected）”时，工程师从日志或 APM 链路追踪中抓取到的，往往是一整坨<strong>长达数百行、毫无格式、压缩成单行的怪兽级 SQL</strong>。</p>
+<p>为了看清复杂的 <code>JOIN</code> 关联条件、嵌套子查询与 <code>WHERE</code> 过滤逻辑，许多工程师的第一反应往往是：<strong>直接打开浏览器，随手将整段 SQL 粘贴到某公网在线美化网站中。</strong></p>
+<p>然而，这一看似本能的操作背后，却潜藏着企业核心数据架构全盘失守的严重安全隐患。</p>
+<hr class="article-divider">
+<h2 id="一-警惕-随手在线排版-sql-等于交出数据库-底牌">一、警惕：随手在线排版 SQL，等于交出数据库“底牌”</h2>
+<p>很多技术人员对 API 接口中的 Token 和密码保持高度警惕，却往往低估了 <strong>SQL 语句本身的敏感级别</strong>。</p>
+<h3 id="1-核心业务模型与数据资产的完全裸奔">1. 核心业务模型与数据资产的完全裸奔</h3>
+<p>一段真实的生产环境 SQL 语句，实质上是企业商业逻辑和核心数据拓扑的高度浓缩镜像：</p>
+<ul class="article-list">
+<li><strong>业务数据模型（Data Schema）</strong>：表名（如 <code>t_order_payment_flow</code>、<code>t_user_kyc_info</code>）直接透露了核心业务模块划分、分库分表规则及字段字典设计；</li>
+<li><strong>敏感商业规则（Business Logic）</strong>：<code>CASE WHEN</code> 条件中的返佣比例、风控阈值、会员折扣梯队、分润结算公式等核心算法逻辑被全盘曝光；</li>
+<li><strong>真实查询参数残留</strong>：从生产日志抓出的 SQL 往往带有真实的生产环境参数（如用户身份证哈希、交易订单号、手机号、企业租户 ID <code>tenant_id</code>）。</li>
+</ul>
+<p>如果使用的在线格式化工具依赖后端服务器进行分词解析，这些包含高商业价值与合规风险的数据就会被远程记录在服务端的请求日志（Access Logs）甚至缓存中。一旦该工具站遭受黑客攻击或遭遇数据拖库，你的系统架构与业务逻辑将直接暴露于阳光之下。</p>
+<h3 id="2-纯前端离线沙箱-代码安全的最后一道防线">2. 纯前端离线沙箱：代码安全的最后一道防线</h3>
+<p>微工坊（TinyTools）的 <strong>SQL 格式化工具</strong> 与 <strong>SQL 压缩器</strong> 坚持“全客户端本地运算”：</p>
+<ul class="article-list">
+<li><strong>词法分词（Lexer Tokenizer）</strong> 完全在浏览器的原生 JavaScript 引擎中执行；</li>
+<li><strong>0 外部网络请求</strong>：你可以直接按下 <code>F12</code> 查看 Network 网络面板，在整个格式化、高亮与压缩过程中，没有任何一个字节上传至远端服务器；</li>
+<li><strong>断网即用</strong>：哪怕在银行隔离内网、企业内网机房或离线断网环境中，均可顺畅排版。</li>
+</ul>
+<hr class="article-divider">
+<h2 id="二-企业级-sql-排版的三大黄金准则与踩坑防范">二、企业级 SQL 排版的三大黄金准则与踩坑防范</h2>
+<p>一份赏心悦目的 SQL 排版不仅能提升代码审查（Code Review）效率，更能直接避免生产逻辑 Bug。</p>
+<h3 id="1-关键字统一大写-标识符与字段保持自明">1. 关键字统一大写，标识符与字段保持自明</h3>
+<p>根据 ANSI SQL 与各大主流数据库军规标准，保留关键字（如 <code>SELECT</code>, <code>FROM</code>, <code>LEFT JOIN</code>, <code>WHERE</code>, <code>GROUP BY</code>, <code>ORDER BY</code>）应统一使用大写，而数据库表名、列名和别名保持统一风格（推荐下划线小写）：</p>
+<div class="code-block-wrapper"><pre><code class="language-sql">-- ❌ 排版混乱：大小写混杂，关联关系一团糟
+select o.id, u.name, sum(p.amount) from orders o left join users u on o.user_id = u.id inner join payments p on o.id = p.order_id where o.status = &#x27;COMPLETED&#x27; group by o.id, u.name having sum(p.amount) &gt; 1000 order by sum(p.amount) desc;
+
+-- ✅ 规范排版：层级分明，视觉锚点清晰
+SELECT
+    o.id AS order_id,
+    u.name AS user_name,
+    SUM(p.amount) AS total_amount
+FROM orders o
+LEFT JOIN users u 
+    ON o.user_id = u.id
+INNER JOIN payments p 
+    ON o.id = p.order_id
+WHERE
+    o.status = &#x27;COMPLETED&#x27;
+GROUP BY
+    o.id,
+    u.name
+HAVING
+    SUM(p.amount) &gt; 1000
+ORDER BY
+    total_amount DESC;</code></pre></div>
+<h3 id="2-避免盲目格式化破坏字符串字面量">2. 避免盲目格式化破坏字符串字面量</h3>
+<p>粗糙的在线脚本常使用简单的正则表达式替换空格，导致 SQL 内部单引号包裹的文本（如 <code>WHERE remark = 'Line 1 \n Line 2'</code>）内部换行或缩进被强行篡改，引发语义漂移。微工坊基于状态机词法分析器，严格保护字符串字面量、注释内容不被污染。</p>
+<h3 id="3-子查询与-cte-通用表表达式-缩进对齐">3. 子查询与 CTE（通用表表达式）缩进对齐</h3>
+<p>对于多层嵌套的子查询（Subquery）或 <code>WITH cte AS (...)</code> 复杂计算，规范的 4 格/2 格缩进能让数据流向一目了然，一眼看出 <code>JOIN</code> 是否缺失 <code>ON</code> 条件，彻底规避因排版混乱引发的<strong>笛卡尔积灾难</strong>。</p>
+<hr class="article-divider">
+<h2 id="三-格式化-vs-压缩-sql-压缩器的实战应用场景">三、格式化 vs 压缩：SQL 压缩器的实战应用场景</h2>
+<p>与开发排查阶段追求的高可读性不同，在某些特定工程环节中，我们反而需要 <strong>SQL 压缩器（SQL Minifier）</strong> 将多行 SQL 压制为极简单行：</p>
+<ol class="article-list">
+<li><strong>持久化与日志存储节约</strong>：在 APM 链路追踪、慢查询日志表或分布式埋点存储中，压缩去除所有无用换行与多余空格，可减少高达 30%~50% 的网络带宽与 Elasticsearch / ClickHouse 存储开销；</li>
+<li><strong>嵌入式配置与微服务属性</strong>：将多行复杂的初始化 SQL 写入 <code>application.yml</code>、Docker 环境变量或 Kubernetes ConfigMap 时，单行压缩能够完全规避 YAML 缩进错位与换行转义异常；</li>
+<li><strong>缓存 Key 快速哈希</strong>：将规范化压缩后的 SQL 作为 Redis 查询缓存的 Key 前缀，确保相同语义的查询具有完全一致的哈希命中率。</li>
+</ol>
+<hr class="article-divider">
+<h2 id="四-安全审计利器-配合-文本对比工具-进行-sql-重构验证">四、安全审计利器：配合“文本对比工具”进行 SQL 重构验证</h2>
+<p>在数据库性能调优中，DBA 和高级开发经常需要重构 SQL（例如将 <code>WHERE IN</code> 改造为 <code>EXISTS</code>，或者重排 <code>JOIN</code> 驱动表顺序）。如何确保优化后的 SQL 没有失手误删关键过滤条件？</p>
+<p><strong>微工坊推荐的高效审计工作流</strong>：</p>
+<ol class="article-list">
+<li><strong>原 SQL 格式化</strong>：使用 <strong>SQL 格式化工具</strong> 规范排版并复制；</li>
+<li><strong>调优后 SQL 格式化</strong>：以相同缩进标准排版调优后的 SQL；</li>
+<li><strong>纯本地语义 Diff 校验</strong>：将两份排版后的 SQL 粘贴到微工坊的 <strong>文本对比工具（Text Diff）</strong> 中；</li>
+<li><strong>实时高亮确认</strong>：在并排对比面板中逐行核验字段别名、<code>WHERE</code> 条件边界与参数占位符，确认逻辑 100% 严谨再上线执行。</li>
+</ol>
+<hr class="article-divider">
+<h2 id="五-开发与生产数据库安全规范清单">五、开发与生产数据库安全规范清单</h2>
+<ol class="article-list">
+<li><strong>本地沙箱原则</strong>：涉及真实数据结构、线上慢查询诊断时，严禁使用向云端服务端发送请求的在线格式化站点；</li>
+<li><strong>预先参数脱敏</strong>：在排查包含敏感个人信息（PII）的 SQL 时，可先将具体数值替换为占位符 <code>?</code> 或通配符；</li>
+<li><strong>严格保留注释</strong>：涉及核心业务逻辑的复杂查询，务必在 SQL 中保留清晰注释，并在格式化时配置保护注释；</li>
+<li><strong>善用离线利器</strong>：将微工坊（TinyTools）作为团队标配书签，在享受极速响应的同时，筑牢企业代码资产防泄漏的高压线。</li>
+</ol>
+            </div>
+
+            
+            <section class="article-tools-section">
+                <h3 class="tools-section-title"><i class="fas fa-magic" style="color: #6366f1;"></i> 本文提及与推荐的在线工具</h3>
+                <div class="tools-cta-grid">
+                    
+    <div class="embedded-tool-card" style="--card-accent: #10b981;">
+        <div class="tool-card-icon" style="background: #10b98120; color: #10b981;">
+            🗄️
+        </div>
+        <div class="tool-card-body">
+            <div class="tool-card-header">
+                <span class="tool-name">SQL 格式化工具</span>
+                <span class="tool-badge">纯前端·免安装</span>
+            </div>
+            <p class="tool-desc">格式化 SQL 语句，提升可读性</p>
+        </div>
+        <div class="tool-card-action">
+            <a href="../tools/sql-formatter/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+                <i class="fas fa-play"></i> 立即使用
+            </a>
+        </div>
+    </div>
+    
+    <div class="embedded-tool-card" style="--card-accent: #dc2626;">
+        <div class="tool-card-icon" style="background: #dc262620; color: #dc2626;">
+            🗄️
+        </div>
+        <div class="tool-card-body">
+            <div class="tool-card-header">
+                <span class="tool-name">SQL 压缩器</span>
+                <span class="tool-badge">纯前端·免安装</span>
+            </div>
+            <p class="tool-desc">压缩 SQL 语句，移除多余空白</p>
+        </div>
+        <div class="tool-card-action">
+            <a href="../tools/sql-minifier/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+                <i class="fas fa-play"></i> 立即使用
+            </a>
+        </div>
+    </div>
+    
+    <div class="embedded-tool-card" style="--card-accent: #fa709a;">
+        <div class="tool-card-icon" style="background: #fa709a20; color: #fa709a;">
+            🔍
+        </div>
+        <div class="tool-card-body">
+            <div class="tool-card-header">
+                <span class="tool-name">文本对比工具</span>
+                <span class="tool-badge">纯前端·免安装</span>
+            </div>
+            <p class="tool-desc">比较两段文本的差异，支持逐行对比</p>
+        </div>
+        <div class="tool-card-action">
+            <a href="../tools/text-diff/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+                <i class="fas fa-play"></i> 立即使用
+            </a>
+        </div>
+    </div>
+    
+                </div>
+            </section>
+            
+
+            <div class="article-footer">
+                <a href="index.html" class="back-to-blog">
+                    <i class="fas fa-arrow-left"></i> 返回博客文章列表
+                </a>
+                <a href="../" class="btn-use-tool" style="background: var(--bg-hover); color: var(--text) !important;">
+                    <i class="fas fa-th-large"></i> 浏览微工坊全部工具
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 微工坊 TinyTools (html.tpsh.cc) · 纯前端轻量工具集合平台</p>
+        </div>
+    </footer>
+
+    <script>
+        const currentTheme = localStorage.getItem('justhtmls-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.innerHTML = currentTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        
+        themeBtn.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            const nextTheme = isLight ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('justhtmls-theme', nextTheme);
+            themeBtn.innerHTML = nextTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+    </script>
+</body>
+</html>

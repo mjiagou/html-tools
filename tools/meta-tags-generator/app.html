@@ -4,7 +4,7 @@
     <link rel="icon" href="../../favicon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta 标签生成器 - 微工坊 TinyTools</title>
+    <title>Meta 标签生成器 在线工具 - 微工坊 TinyTools | 纯前端免安装</title>
     <link rel="canonical" href="https://html.tpsh.cc/tools/meta-tags-generator/app.html">
     <style>
         * {
@@ -159,6 +159,24 @@
             transform: translateY(-1px);
         }
     </style>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Meta 标签生成器",
+    "url": "https://html.tpsh.cc/tools/meta-tags-generator/app.html",
+    "description": "快速生成网页 SEO Meta 标签",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+    }
+}
+    </script>
 </head>
 <body>
     <a class="tool-home-link" href="../../index.html">首页</a>
@@ -213,8 +231,8 @@
 
                 const lines = [];
                 if (title) lines.push(`<title>${title}</title>`);
-                if (description) lines.push(`<meta name="description" content="${description}">`);
-                if (keywords) lines.push(`<meta name="keywords" content="${keywords}">`);
+                if (description) lines.push(`<meta name="description" content="快速生成网页 SEO Meta 标签。微工坊纯前端工具，浏览器本地安全计算，数据隐私零上传，即开即用。">`);
+                if (keywords) lines.push(`<meta name="keywords" content="meta, seo, generator, developer, 开发者工具, 编程辅助, 纯前端免安装, 在线工具, 免安装, 微工坊, TinyTools">`);
                 if (url) lines.push(`<link rel="canonical" href="${url}">`);
                 if (title) lines.push(`<meta property="og:title" content="${title}">`);
                 if (description) lines.push(`<meta property="og:description" content="${description}">`);
