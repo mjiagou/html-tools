@@ -20,9 +20,21 @@
   </url>
   <url>
     <loc>https://html.tpsh.cc/blog/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://html.tpsh.cc/blog/safe-regex-testing-and-redos-prevention.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://html.tpsh.cc/blog/remote-api-debugging-and-http-status-guide.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://html.tpsh.cc/blog/cron-expression-guide-and-generator.html</loc>

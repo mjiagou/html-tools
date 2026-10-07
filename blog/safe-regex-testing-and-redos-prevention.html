@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式也能搞崩服务器？一招排查 ReDoS 灾难与实时捕获测试 - 微工坊 TinyTools 博客</title>
+    <meta name="description" content="深入剖析正则表达式中灾难性回溯（Catastrophic Backtracking）导致的 ReDoS 拒绝服务漏洞，详解 NFA 引擎匹配机制、嵌套量词陷阱与贪婪/惰性匹配差异，并提供基于浏览器纯前端沙箱的安全正则调试与文本清洗实战方案。">
+    <meta name="keywords" content="正则表达式测试, ReDoS漏洞, 正则回溯, 在线正则工具, 正则表达式调试, 贪婪匹配与惰性匹配, 纯前端工具">
+    <link rel="canonical" href="https://html.tpsh.cc/blog/safe-regex-testing-and-redos-prevention.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="微工坊 TinyTools">
+    <meta property="og:url" content="https://html.tpsh.cc/blog/safe-regex-testing-and-redos-prevention.html">
+    <meta property="og:title" content="正则表达式也能搞崩服务器？一招排查 ReDoS 灾难与实时捕获测试">
+    <meta property="og:description" content="深入剖析正则表达式中灾难性回溯（Catastrophic Backtracking）导致的 ReDoS 拒绝服务漏洞，详解 NFA 引擎匹配机制、嵌套量词陷阱与贪婪/惰性匹配差异，并提供基于浏览器纯前端沙箱的安全正则调试与文本清洗实战方案。">
+    <meta property="og:image" content="https://html.tpsh.cc/favicon.svg">
+    
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="正则表达式也能搞崩服务器？一招排查 ReDoS 灾难与实时捕获测试">
+    <meta property="twitter:description" content="深入剖析正则表达式中灾难性回溯（Catastrophic Backtracking）导致的 ReDoS 拒绝服务漏洞，详解 NFA 引擎匹配机制、嵌套量词陷阱与贪婪/惰性匹配差异，并提供基于浏览器纯前端沙箱的安全正则调试与文本清洗实战方案。">
+    
+    <link rel="icon" href="../favicon.svg">
+    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.min.css">
+    
+    <!-- Structured Data (Article Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "正则表达式也能搞崩服务器？一招排查 ReDoS 灾难与实时捕获测试",
+      "description": "深入剖析正则表达式中灾难性回溯（Catastrophic Backtracking）导致的 ReDoS 拒绝服务漏洞，详解 NFA 引擎匹配机制、嵌套量词陷阱与贪婪/惰性匹配差异，并提供基于浏览器纯前端沙箱的安全正则调试与文本清洗实战方案。",
+      "datePublished": "2026-10-04",
+      "dateModified": "2026-10-04",
+      "author": {
+        "@type": "Organization",
+        "name": "微工坊 TinyTools",
+        "url": "https://html.tpsh.cc/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "微工坊 TinyTools",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://html.tpsh.cc/favicon.svg"
+        }
+      },
+      "mainEntityOfPage": "https://html.tpsh.cc/blog/safe-regex-testing-and-redos-prevention.html"
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --bg: #0f172a;
+            --bg-card: #1e293b;
+            --bg-hover: #334155;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+            --content-width: 820px;
+        }
+
+        [data-theme="light"] {
+            --bg: #ffffff;
+            --bg-card: #f8fafc;
+            --bg-hover: #e2e8f0;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .theme-btn {
+            background: var(--bg-hover);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 24px 0 12px;
+            font-size: 14px;
+            color: var(--text-muted);
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--primary);
+        }
+
+        /* Article Header */
+        .article-header {
+            padding: 24px 0 32px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 36px;
+        }
+
+        .article-title {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.35;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .article-meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Article Content */
+        .article-content {
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .article-content p {
+            margin-bottom: 22px;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .article-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 40px 0 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+            color: var(--text);
+        }
+
+        .article-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 30px 0 14px;
+            color: var(--text);
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 0 0 24px 28px;
+            line-height: 1.8;
+        }
+
+        .article-content li {
+            margin-bottom: 8px;
+        }
+
+        .article-content a {
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .article-quote {
+            margin: 24px 0;
+            padding: 16px 20px;
+            border-left: 4px solid var(--primary);
+            background: var(--bg-card);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .article-divider {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 40px 0;
+        }
+
+        .code-block-wrapper {
+            margin: 20px 0 26px;
+            background: #090d16;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        [data-theme="light"] .code-block-wrapper {
+            background: #f1f5f9;
+        }
+
+        pre {
+            padding: 16px 20px;
+            margin: 0;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: inherit;
+        }
+
+        p code, li code {
+            background: var(--bg-hover);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13.5px;
+            color: #ec4899;
+        }
+
+        /* Tools Section */
+        .article-tools-section {
+            margin-top: 50px;
+            padding: 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+
+        .tools-section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tools-cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .embedded-tool-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .embedded-tool-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .tool-card-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .tool-card-body {
+            flex: 1;
+            margin-bottom: 16px;
+        }
+
+        .tool-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .tool-name {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .tool-badge {
+            font-size: 11px;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .tool-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .btn-use-tool {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 100%;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-use-tool:hover {
+            background: var(--primary-dark);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 640px) {
+            .article-title {
+                font-size: 24px;
+            }
+            .tools-cta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="../" class="logo">
+                <img src="../favicon.svg" alt="微工坊 Logo" style="width:34px;height:34px;">
+                <span class="logo-text">微工坊 <span style="font-size:12px;font-weight:400;opacity:0.8;">Blog</span></span>
+            </a>
+            <div class="header-nav">
+                <a href="../" class="nav-link"><i class="fas fa-home"></i> 首页</a>
+                <a href="index.html" class="nav-link"><i class="fas fa-newspaper"></i> 博客列表</a>
+                <a href="../tools-rank.html" class="nav-link"><i class="fas fa-chart-line"></i> 工具排行</a>
+                <button class="theme-btn" id="theme-toggle" title="切换主题"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumbs">
+            <a href="../"><i class="fas fa-home"></i> 首页</a>
+            <span>/</span>
+            <a href="index.html">博客</a>
+            <span>/</span>
+            <span>正文</span>
+        </nav>
+
+        <article class="article-wrapper">
+            <header class="article-header">
+                <h1 class="article-title">正则表达式也能搞崩服务器？一招排查 ReDoS 灾难与实时捕获测试</h1>
+                <div class="article-meta">
+                    <span class="article-meta-item"><i class="far fa-user"></i> 微工坊 TinyTools</span>
+                    <span class="article-meta-item"><i class="far fa-calendar"></i> 2026-10-04</span>
+                    <span class="article-meta-item"><i class="far fa-clock"></i> 7 分钟阅读</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+<p>2019 年 7 月 2 日，全球顶级网络基础设施服务商 Cloudflare 突发全球性瘫痪，包括 Discord、Coinbase 在内的成千上万家主流网站瞬间白屏 27 分钟。事后官方发布的故障调查报告让无数工程师震惊：<strong>导致全球边缘节点 CPU 100% 耗尽的罪魁祸首，仅仅是一条包含灾难性回溯的正则表达式！</strong></p>
+<p>在后端校验、爬虫提取、表单审计与日志清洗中，正则表达式无处不在。然而，极少有开发者意识到：<strong>一条看似人畜无害的正则规则，在恶意攻击者精心构造的输入面前，足以成为秒杀整台服务器的“定时炸弹”——这就是臭名昭著的 ReDoS（Regular Expression Denial of Service）。</strong></p>
+<p>本文将为你深度拆解 ReDoS 漏洞的底层成因，并分享如何在安全受控的纯前端沙箱中进行正则测试与模式加固。</p>
+<hr class="article-divider">
+<h2 id="一-为什么一条正则能吃满-100-cpu-深入-nfa-回溯机制">一、为什么一条正则能吃满 100% CPU？深入 NFA 回溯机制</h2>
+<p>目前绝大多数现代编程语言（JavaScript、Python、Java、PHP、Ruby）内置的正则引擎，采用的都是 <strong>NFA（非确定性有限状态自动机）</strong> 架构。</p>
+<p>NFA 引擎的核心特性是：<strong>“不撞南墙不回头”的贪婪与回溯机制</strong>。</p>
+<h3 id="1-灾难性回溯-catastrophic-backtracking-的发生过程">1. 灾难性回溯（Catastrophic Backtracking）的发生过程</h3>
+<p>考虑以下这个极其简单的正则表达式模式：</p>
+<div class="code-block-wrapper"><pre><code class="language-regex">^(a+)+$</code></pre></div>
+<p>当输入文本为 <code>aaaaX</code> 时：</p>
+<ol class="article-list">
+<li>引擎首先尝试让内部的 <code>a+</code> 匹配所有 4 个 <code>a</code>；</li>
+<li>随后发现末尾的 <code>X</code> 无法匹配 <code>$</code>；</li>
+<li>于是引擎开始“回溯”：吐出一个 <code>a</code>，交给外层的 <code>+</code> 去重新组合；</li>
+<li>随着输入字符串长度的增加，内部组合的分支呈<strong>指数级暴增</strong>！</li>
+</ol>
+<div class="code-block-wrapper"><pre><code>输入长度 10: 回溯约 1,024 次
+输入长度 20: 回溯约 1,048,576 次（耗时约 0.2 秒）
+输入长度 30: 回溯约 1,073,741,824 次（耗时超过数分钟，CPU 100% 飙高）
+输入长度 40: 需要数天甚至数年才能完成计算！</code></pre></div>
+<p>黑客只需向你的登录、注册或搜索接口发送一段长达几十字符的特制畸形文本，后端的 Node.js、Java 或 Python 线程池就会瞬间被单核跑满卡死，造成服务彻底瘫痪。</p>
+<hr class="article-divider">
+<h2 id="二-经典-redos-危险模式与排坑指南">二、经典 ReDoS 危险模式与排坑指南</h2>
+<p>在日常业务代码审查中，如果发现以下三种“红线模式”，必须立即整改：</p>
+<h3 id="1-危险模式一-嵌套量词-nested-quantifiers-">1. 危险模式一：嵌套量词（Nested Quantifiers）</h3>
+<p>即一个具有重复匹配的子组外层又套了一层重复修饰符：</p>
+<ul class="article-list">
+<li>❌ <code>(a+)+</code></li>
+<li>❌ <code>([a-zA-Z0-9]+)*$</code></li>
+<li>❌ <code>(a|b+)+</code></li>
+</ul>
+<blockquote class="article-quote"><p><strong>防范对策</strong>：消除冗余嵌套。例如提取连续字母数字时，直接使用 <code>^[a-zA-Z0-9]+$</code> 即可，切勿在外层套上括号重复。</p></blockquote>
+<h3 id="2-危险模式二-带有重叠分支的交替匹配-overlapping-alternatives-">2. 危险模式二：带有重叠分支的交替匹配（Overlapping Alternatives）</h3>
+<ul class="article-list">
+<li>❌ <code>(a|a)+</code></li>
+<li>❌ <code>(\d+|[0-9]+)+</code></li>
+</ul>
+<p>引擎在遇到失败时，会在毫无差异的两个候选分支之间进行无休止的无效穷举。</p>
+<h3 id="3-危险模式三-前后夹击的通配符-greedy-wildcards-">3. 危险模式三：前后夹击的通配符（Greedy Wildcards）</h3>
+<p>Cloudflare 当年正是掉进了这个陷阱：<code>.*(?:.*=.*).*</code>。</p>
+<p>前后三个 <code>.*</code> 彼此包含，当遇到一行缺少 <code>=</code> 的超长日志文本时，引擎尝试了数十亿种排列组合去匹配那根本不存在的等号，直接击穿了边缘节点的计算资源。</p>
+<blockquote class="article-quote"><p><strong>防范对策</strong>：<strong>永远不要滥用 <code>.*</code></strong>！尽量使用排除型字符集，例如使用 <code>[^=\n]*</code> 明确指定“除等号与换行符之外的字符”，从根源上截断回溯路径。</p></blockquote>
+<hr class="article-divider">
+<h2 id="三-javascript-开发者必知的正则两大经典-幽灵-bug-">三、JavaScript 开发者必知的正则两大经典“幽灵 Bug”</h2>
+<p>除了性能崩溃，前端与全栈工程师还常遭遇以下两个隐蔽的逻辑陷阱：</p>
+<h3 id="1-全局标志位-g-的状态留存陷阱-lastindex-幽灵-">1. 全局标志位 <code>g</code> 的状态留存陷阱（<code>lastIndex</code> 幽灵）</h3>
+<p>很多工程师遇到过这种灵异现象：同样的一段字符串，连续调用两次 <code>regex.test(str)</code>，结果竟然<strong>一次返回 true，一次返回 false</strong>！</p>
+<div class="code-block-wrapper"><pre><code class="language-javascript">const regex = /^\d+$/g; // 注意末尾带了 g 标志位
+console.log(regex.test(&quot;123&quot;)); // true
+console.log(regex.test(&quot;123&quot;)); // false 😱</code></pre></div>
+<ul class="article-list">
+<li><strong>根因剖析</strong>：带有 <code>g</code> 标志位的 <code>RegExp</code> 对象是有状态的。每次匹配成功后，它会记录匹配结束的位置到 <code>lastIndex</code> 属性。第二次调用时，它会从 <code>lastIndex</code> 继续向后搜寻，直接导致匹配越界返回 <code>false</code>！</li>
+<li><strong>最佳实践</strong>：纯校验场景切勿携带 <code>g</code> 标志位；若必须携带，每次调用前手动重置 <code>regex.lastIndex = 0</code>。</li>
+</ul>
+<h3 id="2-贪婪匹配与惰性匹配的边界">2. 贪婪匹配与惰性匹配的边界</h3>
+<ul class="article-list">
+<li><strong>贪婪匹配（默认）</strong>：<code>/&lt;p&gt;.*&lt;\/p&gt;/</code> 匹配从第一个 <code>&lt;p&gt;</code> 到全文最后一个 <code>&lt;/p&gt;</code> 的全部内容；</li>
+<li><strong>惰性匹配（增加 <code>?</code>）</strong>：<code>/&lt;p&gt;.*?&lt;\/p&gt;/</code> 仅匹配当前段落，遇到第一个闭合标签即止。</li>
+</ul>
+<hr class="article-divider">
+<h2 id="四-微工坊纯前端正则测试器-本地沙箱与安全调试">四、微工坊纯前端正则测试器：本地沙箱与安全调试</h2>
+<p>很多开发者习惯打开公网在线正则测试网页，然而很多传统网站将输入发送到服务器端执行，甚至缺少超时熔断机制。一旦你尝试输入一条疑似 ReDoS 的复杂规则，不仅会拖垮对方服务器，更可能导致你的测试数据（如包含客户真实手机号或企业内网地址的日志）泄露到第三方。</p>
+<p>微工坊（TinyTools）提供了 <strong>纯前端正则表达式测试器</strong>：</p>
+<h3 id="1-纯本地浏览器隔离">1. 纯本地浏览器隔离</h3>
+<p>所有正则表达式分词、执行与位置高亮均在用户电脑本地的 V8 / SpiderMonkey 引擎中执行。<strong>0 外部网络请求（Zero Outgoing Requests）</strong>，即使测试千万行企业核心配置，也不用担心隐私外泄。</p>
+<h3 id="2-毫秒级即时捕获组与高亮">2. 毫秒级即时捕获组与高亮</h3>
+<p>支持实时显示全局匹配总数、匹配索引位置（Index），并独立展开具名捕获组（Named Capture Groups）与匿名捕获组，调试效率比传统控制台 <code>console.log</code> 提升 10 倍。</p>
+<h3 id="3-搭配文本清理与批量替换-形成数据处理闭环">3. 搭配文本清理与批量替换，形成数据处理闭环</h3>
+<p>在对海量日志或文本进行正则清洗时，可以联动微工坊的 <strong>文本清理器</strong>（预先剔除多余空行与制表符缩进）与 <strong>文本查找替换</strong>（基于安全正则批量重构字符），实现全链路本地闭环处理。</p>
+<hr class="article-divider">
+<h2 id="五-安全高效的正则工程规范清单">五、安全高效的正则工程规范清单</h2>
+<ol class="article-list">
+<li><strong>原则一：能用精确字符集，绝不用通配符 <code>.</code></strong>（如提取邮箱用户名用 <code>[a-zA-Z0-9._%+-]+</code>）；</li>
+<li><strong>原则二：严禁嵌套重复量词</strong>（杜绝 <code>(x+)+</code>、<code>(x*)*</code> 等爆炸结构）；</li>
+<li><strong>原则三：后端执行设置超时保护</strong>（在 Java/Go/Node.js 中配置正则超时上限，如超过 50ms 强制超时熔断）；</li>
+<li><strong>原则四：善用本地纯前端测试</strong>：收藏微工坊（TinyTools），在本地安全沙箱中完成边界值与异常输入的充分验证再发布上线。</li>
+</ol>
+            </div>
+
+            <section class="article-tools-section">
+                <h3 class="tools-section-title"><i class="fas fa-magic" style="color: #6366f1;"></i> 本文提及与推荐的在线工具</h3>
+                <div class="tools-cta-grid">
+                    
+    <div class="embedded-tool-card" style="--card-accent: #a855f7;">
+        <div class="tool-card-icon" style="background: #a855f720; color: #a855f7;">
+            🔍
+        </div>
+        <div class="tool-card-body">
+            <div class="tool-card-header">
+                <span class="tool-name">正则表达式测试器</span>
+                <span class="tool-badge">纯前端·免安装</span>
+            </div>
+            <p class="tool-desc">实时测试和调试正则表达式，支持匹配位置高亮与捕获组提取</p>
+        </div>
+        <div class="tool-card-action">
+            <a href="../tools/regex-tester/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+                <i class="fas fa-play"></i> 立即使用
+            </a>
+        </div>
+    </div>
+    
+    <div class="embedded-tool-card" style="--card-accent: #14b8a6;">
+        <div class="tool-card-icon" style="background: #14b8a620; color: #14b8a6;">
+            🧽
+        </div>
+        <div class="tool-card-body">
+            <div class="tool-card-header">
+                <span class="tool-name">文本清理器</span>
+                <span class="tool-badge">纯前端·免安装</span>
+            </div>
+            <p class="tool-desc">清理文本中的多余空格与空行，规范换行格式，辅助正则前置清洗</p>
+        </div>
+        <div class="tool-card-action">
+            <a href="../tools/text-cleaner/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+                <i class="fas fa-play"></i> 立即使用
+            </a>
+        </div>
+    </div>
+    
+    <div class="embedded-tool-card" style="--card-accent: #8b5cf6;">
+        <div class="tool-card-icon" style="background: #8b5cf620; color: #8b5cf6;">
+            🧲
+        </div>
+        <div class="tool-card-body">
+            <div class="tool-card-header">
+                <span class="tool-name">文本查找替换</span>
+                <span class="tool-badge">纯前端·免安装</span>
+            </div>
+            <p class="tool-desc">支持正则模式批量查找与替换关键词，快速清洗与格式重构</p>
+        </div>
+        <div class="tool-card-action">
+            <a href="../tools/text-replacer/app.html" class="btn-use-tool" target="_blank" rel="noopener">
+                <i class="fas fa-play"></i> 立即使用
+            </a>
+        </div>
+    </div>
+    
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 微工坊 TinyTools (html.tpsh.cc) · 纯前端轻量工具集合平台</p>
+        </div>
+    </footer>
+
+    <script>
+        const currentTheme = localStorage.getItem('justhtmls-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.innerHTML = currentTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        
+        themeBtn.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            const nextTheme = isLight ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('justhtmls-theme', nextTheme);
+            themeBtn.innerHTML = nextTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+    </script>
+</body>
+</html>
